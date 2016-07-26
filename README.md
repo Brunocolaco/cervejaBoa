@@ -1,6 +1,7 @@
 # Cerveja Boa
 Projeto em JavaFX para construção em conjunto com os alunos de 2016.
-Equipe: A
+
+<strong>Equipe: A</strong>
 
 <h3> Metafora do usuário </h3>
 
