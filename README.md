@@ -9,3 +9,12 @@ Gostaria de um sistema que me permitisse cadastrar diferentes tipos de cervejas 
 
 <h3> Histórias </h3>
 
+<h3> Equipe <h3>
+
+<ul>
+<li> Luiz Felipe Romani Tobaldini </li>
+<li> Alisson Girardi </li>
+<li> Marcos Antonio Policeno </li> 
+<li> Mateus Ribeiro de Jesus </li>
+<li> Bruno Colaço </li>
+</ul>
