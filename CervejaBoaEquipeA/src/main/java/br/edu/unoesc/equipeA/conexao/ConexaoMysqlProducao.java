@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexaoMysqlProducao {
+public class ConexaoMysqlProducao implements Conexao {
 	private static Connection connection;
 
 	static {
