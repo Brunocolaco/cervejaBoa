@@ -3,6 +3,8 @@ package br.edu.unoesc.equipeA.factory;
 import br.edu.unoesc.equipeA.conexao.ConexaoMysqlProducao;
 import br.edu.unoesc.equipeA.dao.CopoDAO;
 import br.edu.unoesc.equipeA.dao.CopoJDBC;
+import br.edu.unoesc.equipeA.dao.CorDAO;
+import br.edu.unoesc.equipeA.dao.CorJDBC;
 
 public class DAOFactory {
 
@@ -23,5 +25,9 @@ public class DAOFactory {
 
 	public CopoDAO copoDAO() {
 		return new CopoJDBC(new ConexaoMysqlProducao());
+	}
+	
+	public CorDAO corDAO() {
+		return new CorJDBC(new ConexaoMysqlProducao());
 	}
 }
