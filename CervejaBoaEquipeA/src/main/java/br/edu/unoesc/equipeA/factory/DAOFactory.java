@@ -7,6 +7,8 @@ import br.edu.unoesc.equipeA.dao.CorDAO;
 import br.edu.unoesc.equipeA.dao.CorJDBC;
 import br.edu.unoesc.equipeA.dao.EstiloDAO;
 import br.edu.unoesc.equipeA.dao.EstiloJDBC;
+import br.edu.unoesc.equipeA.dao.NacionalidadeDAO;
+import br.edu.unoesc.equipeA.dao.NacionalidadeJDBC;
 
 public class DAOFactory {
 
@@ -35,5 +37,9 @@ public class DAOFactory {
 
 	public EstiloDAO estiloDAO() {
 		return new EstiloJDBC(new ConexaoMysqlProducao());
+	}
+	
+	public NacionalidadeDAO nacionalidadeDAO() {
+		return new NacionalidadeJDBC(new ConexaoMysqlProducao());
 	}
 }
