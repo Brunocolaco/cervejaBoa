@@ -15,7 +15,7 @@ public class NacionalidadeDAOTest {
 	@Test
 	public void deveInserirNacionalidadeNovo() {
 		Nacionalidade nacionalidade = new Nacionalidade();
-		nacionalidade.setNome("Juca");
+		nacionalidade.setNome("Brasileiro");
 		NacionalidadeDAO nacionalidadeDAO = DAOFactory.get().nacionalidadeDAO();
 		nacionalidadeDAO.inserir(nacionalidade);
 		assertNotNull(nacionalidade.getCodigo());
@@ -28,19 +28,20 @@ public class NacionalidadeDAOTest {
 		nacionalidade.setNome("Americano");
 		NacionalidadeDAO nacionalidadeDAO = DAOFactory.get().nacionalidadeDAO();
 		nacionalidadeDAO.inserir(nacionalidade);
-		nacionalidade.setNome("Pilsner");
+		nacionalidade.setNome("Africano");
 		nacionalidadeDAO.alterar(nacionalidade);
 		Nacionalidade nacionalidadeBanco = nacionalidadeDAO.get(nacionalidade.getCodigo());
+		assertEquals("Africano", nacionalidadeBanco.getNome());
 		nacionalidadeDAO.excluir(nacionalidadeBanco.getCodigo());
 	}
 
 	@Test
 	public void deveListaNacionalidadePorNome() {
 		Nacionalidade nacionalidade = new Nacionalidade();
-		nacionalidade.setNome("Groenjo");
+		nacionalidade.setNome("Outra nacionalidade");
 		NacionalidadeDAO nacionalidadeDAO = DAOFactory.get().nacionalidadeDAO();
 		nacionalidadeDAO.inserir(nacionalidade);
-		Collection<Nacionalidade> nacionalidades = nacionalidadeDAO.getPorNome("Groenjo");
+		Collection<Nacionalidade> nacionalidades = nacionalidadeDAO.getPorNome("Outra nacionalidade");
 		assertEquals(1, nacionalidades.size());
 		nacionalidadeDAO.excluir(nacionalidade.getCodigo());
 	}

@@ -39,7 +39,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 	
 	@Override
 	public void alterar(Nacionalidade objeto) {
-		String update = "update nacionalidade set NomePais=? " + "where idNacionalidade = ?";
+		String update = "update nacionalidade set NomePais=? where idNacionalidade=?";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(update);
 			ps.setString(1, objeto.getNome());
@@ -54,7 +54,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 	
 	@Override
 	public void excluir(Long codigo) {
-		String delete = "delete from nacionalidade " + "where idNacionalidade = ?";
+		String delete = "delete from nacionalidade where idNacionalidade=?";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(delete);
 			ps.setLong(1, codigo);
@@ -84,7 +84,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 	
 	@Override
 	public Nacionalidade get(Long codigo) {
-		String sql = "select * from nacionalidade where idPais = ?";
+		String sql = "select * from nacionalidade where idNacionalidade=?";
 		Nacionalidade nacionalidade = null;
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(sql);
@@ -104,7 +104,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 	
 	@Override
 	public Collection<Nacionalidade> getPorNome(String nome) {
-		String sql = "select * from nacionalidade where NomePais = ?";
+		String sql = "select * from nacionalidade where NomePais=?";
 		List<Nacionalidade> nacionalidades = new ArrayList<>();
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(sql);
