@@ -5,6 +5,8 @@ import br.edu.unoesc.equipeA.dao.CopoDAO;
 import br.edu.unoesc.equipeA.dao.CopoJDBC;
 import br.edu.unoesc.equipeA.dao.CorDAO;
 import br.edu.unoesc.equipeA.dao.CorJDBC;
+import br.edu.unoesc.equipeA.dao.EstiloDAO;
+import br.edu.unoesc.equipeA.dao.EstiloJDBC;
 
 public class DAOFactory {
 
@@ -29,5 +31,9 @@ public class DAOFactory {
 	
 	public CorDAO corDAO() {
 		return new CorJDBC(new ConexaoMysqlProducao());
+	}
+
+	public EstiloDAO estiloDAO() {
+		return new EstiloJDBC(new ConexaoMysqlProducao());
 	}
 }
