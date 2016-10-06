@@ -9,28 +9,25 @@ import java.util.Collection;
 import java.util.List;
 
 import br.edu.unoesc.equipeA.conexao.Conexao;
-import br.edu.unoesc.equipeA.model.Copo;
+import br.edu.unoesc.equipeA.model.Usuario;
 
-public class CopoJDBC implements CopoDAO {
+public class UsuarioJDBC implements UsuarioDAO {
 
 	private Conexao conexao;
 
-	/**
-	 * Conexão com o banco de dados.
-	 * 
-	 * @param conexao.get()
-	 */
-	public CopoJDBC(Conexao conexao) {
+	public UsuarioJDBC(Conexao conexao) {
 		this.conexao = conexao;
 	}
 
 	@Override
-	public void inserir(Copo objeto) {
-		String insert = "insert into copo (Nome, TipoCopo) values(?, ?)";
+	public void inserir(Usuario objeto) {
+		String insert = "insert into Usuario (Nome, Login, Senha, Email) values(?,?,?,?)";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
 			ps.setString(1, objeto.getNome());
-			ps.setByte(2, objeto.getTipocopo());
+			ps.setString(2, objeto.getLogin());
+			ps.setString(3, objeto.getSenha());
+			ps.setString(4, objeto.getEmail());
 			ps.executeUpdate();
 			// Popular o objeto com o código gerado.
 			ResultSet rs = ps.getGeneratedKeys();
@@ -44,13 +41,15 @@ public class CopoJDBC implements CopoDAO {
 	}
 
 	@Override
-	public void alterar(Copo objeto) {
-		String update = "update copo set nome=? ,TipoCopo=? " + "where idCopo = ?";
+	public void alterar(Usuario objeto) {
+		String update = "update usuario set nome=?, login=? senha=?, email=? " + "where idUsuario = ?";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(update);
 			ps.setString(1, objeto.getNome());
-			ps.setByte(2, objeto.getTipocopo());
-			ps.setLong(3, objeto.getCodigo());
+			ps.setString(2, objeto.getLogin());
+			ps.setString(3, objeto.getSenha());
+			ps.setString(4, objeto.getEmail());
+			ps.setLong(5, objeto.getCodigo());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -62,7 +61,7 @@ public class CopoJDBC implements CopoDAO {
 
 	@Override
 	public void excluir(Long codigo) {
-		String delete = "delete from copo " + "where idCopo = ?";
+		String delete = "delete from usuario " + "where idUsuario = ?";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(delete);
 			ps.setLong(1, codigo);
@@ -75,69 +74,53 @@ public class CopoJDBC implements CopoDAO {
 	}
 
 	@Override
-	public Collection<Copo> todos() {
-		String sql = "select * from Copo";
-		List<Copo> copos = new ArrayList<>();
+	public Collection<Usuario> todos() {
+		String sql = "select * from Usuario";
+		List<Usuario> usuarios = new ArrayList<>();
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
-			copos = getLista(rs);
+			usuarios = getLista(rs);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			conexao.close();
 		}
-		return copos;
+		return usuarios;
+	}
+
+	private List<Usuario> getLista(ResultSet rs) throws SQLException {
+		List<Usuario> usuarios = new ArrayList<>();
+		while (rs.next()) {
+			usuarios.add(getUsuario(rs));
+		}
+		return usuarios;
 	}
 
 	@Override
-	public Copo get(Long codigo) {
-		String sql = "select * from Copo where idCopo = ?";
-		Copo copo = null;
+	public Usuario get(Long codigo) {
+		String sql = "select * from Usuario where idUsuario = ?";
+		Usuario usuario = null;
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(sql);
 			ps.setLong(1, codigo);
 			ResultSet rs = ps.executeQuery();
 			// Passa por todos os registros que vieram do banco.
 			while (rs.next()) {
-				copo = getCopo(rs);
+				usuario = getUsuario(rs);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			conexao.close();
 		}
-		return copo;
+		return usuario;
 	}
 
-	@Override
-	public Collection<Copo> getPorNome(String nome) {
-		String sql = "select * from Copo where nome = ?";
-		List<Copo> copos = new ArrayList<>();
-		try {
-			PreparedStatement ps = conexao.get().prepareStatement(sql);
-			ps.setString(1, nome);
-			ResultSet rs = ps.executeQuery();
-			copos = getLista(rs);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			conexao.close();
-		}
-		return copos;
-	}
-
-	private List<Copo> getLista(ResultSet rs) throws SQLException {
-		List<Copo> copos = new ArrayList<>();
-		while (rs.next()) {
-			copos.add(getCopo(rs));
-		}
-		return copos;
-	}
-
-	private Copo getCopo(ResultSet rs) throws SQLException {
-		Copo copo = new Copo(rs.getLong("idCopo"), rs.getString("Nome"), rs.getByte("TipoCopo"));
-		return copo;
+	private Usuario getUsuario(ResultSet rs) throws SQLException {
+		Usuario usuario = new Usuario(rs.getLong("idUsuario"), rs.getString("Nome"), rs.getString("Login"),
+				rs.getString("Senha"), rs.getString("Email"));
+		return usuario;
 	}
 
 }
