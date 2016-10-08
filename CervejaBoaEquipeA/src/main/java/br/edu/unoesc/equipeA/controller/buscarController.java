@@ -50,6 +50,7 @@ public class buscarController {
 
 	@FXML
 	void onNovo(ActionEvent event) {
+		System.out.println("Teste!");
 
 	}
 
