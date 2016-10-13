@@ -7,9 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Estilo {
+public class Usuario {
 
 	private Long codigo;
 	private String nome;
-
+	private String login;
+	private String senha;
+	private String email;
 }
