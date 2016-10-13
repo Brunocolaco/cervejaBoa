@@ -14,16 +14,16 @@
    <children>
       <Pane prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXPasswordField layoutX="114.0" layoutY="288.0" maxWidth="294.0" minWidth="186.0" prefHeight="54.0" prefWidth="294.0" promptText="Senha">
+            <JFXPasswordField layoutX="114.0" layoutY="256.0" maxWidth="294.0" minWidth="186.0" prefHeight="54.0" prefWidth="294.0" promptText="Senha">
                <font>
                   <Font size="22.0" />
                </font></JFXPasswordField>
-            <JFXTextField layoutX="113.0" layoutY="231.0" maxWidth="294.0" minWidth="210.0" prefHeight="54.0" prefWidth="294.0" promptText="Usuário">
+            <JFXTextField layoutX="114.0" layoutY="195.0" maxWidth="294.0" minWidth="210.0" prefHeight="54.0" prefWidth="294.0" promptText="Usuário">
                <font>
                   <Font size="22.0" />
                </font></JFXTextField>
             <JFXCheckBox layoutX="273.0" layoutY="423.0" text="Lembre-me" />
-            <JFXTextField layoutX="114.0" layoutY="344.0" maxWidth="294.0" minWidth="197.0" prefHeight="54.0" prefWidth="294.0" promptText="E-mail:">
+            <JFXTextField layoutX="114.0" layoutY="331.0" maxWidth="294.0" minWidth="197.0" prefHeight="54.0" prefWidth="294.0" promptText="E-mail:">
                <font>
                   <Font size="22.0" />
                </font></JFXTextField>
@@ -33,7 +33,7 @@
                </font>
             </JFXButton>
             <Hyperlink layoutX="123.0" layoutY="470.0" text="Esqueceu sua Senha?" />
-            <TextField layoutX="165.0" layoutY="119.0" prefHeight="48.0" prefWidth="170.0" text="CERVEJA BOA">
+            <TextField layoutX="176.0" layoutY="101.0" prefHeight="48.0" prefWidth="170.0" text="CERVEJA BOA">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>

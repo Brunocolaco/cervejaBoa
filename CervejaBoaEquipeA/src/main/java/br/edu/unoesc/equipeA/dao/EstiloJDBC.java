@@ -9,13 +9,10 @@ import java.util.Collection;
 import java.util.List;
 
 import br.edu.unoesc.equipeA.conexao.Conexao;
-
 import br.edu.unoesc.equipeA.model.Estilo;
 
 public class EstiloJDBC implements EstiloDAO {
 
-	
-	
 	private Conexao conexao;
 
 	/**
@@ -32,12 +29,12 @@ public class EstiloJDBC implements EstiloDAO {
 		String insert = "insert into estilo (nome) values(?)";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
-			ps.setString(1, objeto.getNomeEstilo());
+			ps.setString(1, objeto.getNome());
 			ps.executeUpdate();
 			// Popular o objeto com o código gerado.
 			ResultSet rs = ps.getGeneratedKeys();
 			rs.next();
-			objeto.setCodigoEstilo(rs.getLong(1));
+			objeto.setCodigo(rs.getLong(1));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -50,8 +47,8 @@ public class EstiloJDBC implements EstiloDAO {
 		String update = "update estilo set Nome=? " + "where idEstilo = ?";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(update);
-			ps.setString(1, objeto.getNomeEstilo());
-			ps.setLong(2, objeto.getCodigoEstilo());
+			ps.setString(1, objeto.getNome());
+			ps.setLong(2, objeto.getCodigo());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -111,8 +108,6 @@ public class EstiloJDBC implements EstiloDAO {
 		return estilo;
 	}
 
-	
-
 	private List<Estilo> getLista(ResultSet rs) throws SQLException {
 		List<Estilo> estilos = new ArrayList<>();
 		while (rs.next()) {
@@ -127,4 +122,3 @@ public class EstiloJDBC implements EstiloDAO {
 	}
 
 }
-

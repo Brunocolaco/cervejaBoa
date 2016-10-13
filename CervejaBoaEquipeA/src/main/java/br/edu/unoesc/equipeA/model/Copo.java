@@ -12,5 +12,6 @@ public class Copo {
 
 	private Long codigo;
 	private String nome;
+	private Byte Tipocopo;
 
 }

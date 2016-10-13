@@ -1,5 +1,7 @@
 package br.edu.unoesc.equipeA.model;
 
+import java.sql.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,9 +9,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Estilo {
+
+public class Avaliacao {
 
 	private Long codigo;
-	private String nome;
-
+	private String descricaoaval;
+	private Long nota;
+	private Double preco;
+	private Date data;
 }
