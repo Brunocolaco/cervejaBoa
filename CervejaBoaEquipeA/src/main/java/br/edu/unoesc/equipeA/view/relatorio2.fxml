@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTogglePane?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTogglePane />
+      <MenuBar layoutY="-2.0" prefHeight="37.0" prefWidth="1280.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Cadastro">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cerveja" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Avaliações">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Avaliar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatórios">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Ranking" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Cervejas">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Buscar" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <JFXButton defaultButton="true" layoutX="948.0" layoutY="381.0" prefHeight="61.0" prefWidth="134.0" text="Visualizar" textFill="#10681c">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXCheckBox layoutX="14.0" layoutY="229.0" text="Cadastrados pelo Usuário" />
+      <JFXCheckBox checkedColor="#50109c" layoutX="344.0" layoutY="65.0" text="Próxima cerveja a ser provada" />
+      <JFXCheckBox layoutX="344.0" layoutY="100.0" text="Mais Provadas" />
+      <JFXCheckBox layoutX="15.0" layoutY="170.0" text="Menos Provadas" />
+      <JFXButton defaultButton="true" layoutX="1117.0" layoutY="381.0" prefHeight="61.0" prefWidth="134.0" text="Limpar Campos" textFill="#383942" />
+      <JFXButton defaultButton="true" layoutX="780.0" layoutY="381.0" pickOnBounds="false" prefHeight="61.0" prefWidth="134.0" text="Imprimir" textFill="#1e1b1b">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXCheckBox layoutX="345.0" layoutY="140.0" text="Maior Nota" />
+      <JFXCheckBox layoutX="345.0" layoutY="179.0" text="Menor Nota" />
+      <JFXCheckBox layoutX="347.0" layoutY="245.0" text="Maior Valor" />
+      <JFXCheckBox layoutX="347.0" layoutY="213.0" text="Menor Valor" />
+      <JFXCheckBox layoutX="14.0" layoutY="110.0" text="Todas Cadastradas" />
+      <JFXCheckBox layoutX="14.0" layoutY="198.0" text="Não Avaliadas" />
+      <JFXCheckBox layoutX="14.0" layoutY="83.0" text="Estilo " />
+      <JFXCheckBox layoutX="15.0" layoutY="259.0" text="Graduação Alcoólica" />
+      <JFXCheckBox layoutX="15.0" layoutY="142.0" text="Proporção de Malte/Cevada" />
+      <JFXTreeTableView layoutY="457.0" prefHeight="305.0" prefWidth="1280.0">
+         <columns>
+            <TreeTableColumn prefWidth="227.0" text="Nome" />
+         </columns>
+      </JFXTreeTableView>
+      <JFXCheckBox layoutX="15.0" layoutY="54.0" text=" Nacionalidade" />
+   </children>
+</AnchorPane>
