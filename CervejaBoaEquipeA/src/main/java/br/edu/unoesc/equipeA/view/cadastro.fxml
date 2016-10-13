@@ -82,7 +82,7 @@
                   <Font name="Calibri" size="21.0" />
                </font>
             </JFXButton>
-            <JFXButton defaultButton="true" layoutX="405.0" layoutY="618.0" prefHeight="51.0" prefWidth="82.0" text="Novo" />
+            <JFXButton defaultButton="true" layoutX="405.0" layoutY="618.0" prefHeight="51.0" prefWidth="82.0" text="NOVO" />
             <JFXButton defaultButton="true" layoutX="516.0" layoutY="618.0" prefHeight="51.0" prefWidth="82.0" text="Excluir" />
             <Label layoutX="535.0" layoutY="50.0" text="Cadastro Cerveja">
                <font>
