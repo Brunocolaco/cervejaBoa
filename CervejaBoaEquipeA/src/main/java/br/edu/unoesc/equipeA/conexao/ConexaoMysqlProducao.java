@@ -14,12 +14,12 @@ public class ConexaoMysqlProducao implements Conexao {
 	private static void createConnection() {
 		String url = "jdbc:mysql://localhost:3306/cervejaBoa";
 		String user = "root";
-		String password = "gitiga21";
+		String password = "296954";
 		try {
 			connection = DriverManager.getConnection(url, user, password);
 		} catch (SQLException ex) {
 			ex.printStackTrace();
-			System.out.println("Erro de conex√£o com o banco de dados");
+			System.out.println("Erro de conex„o com o banco de dados");
 		}
 	}
 
@@ -39,7 +39,7 @@ public class ConexaoMysqlProducao implements Conexao {
 			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("Erro ao fechar conex√£o");
+			System.out.println("Erro ao fechar conex„o");
 		}
 	}
 
