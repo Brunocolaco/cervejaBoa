@@ -7,9 +7,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Estilo {
+public class Cerveja {
 
 	private Long codigo;
 	private String nome;
+	private String descricao;
+	private Double teoralc;
+	private Double temperatura;
+	private Double propmalte;
+	private Double preco;
+	private Byte imagem;
 
 }
