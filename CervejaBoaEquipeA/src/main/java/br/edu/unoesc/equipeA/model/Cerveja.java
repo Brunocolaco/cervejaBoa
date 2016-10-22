@@ -1,5 +1,6 @@
 package br.edu.unoesc.equipeA.model;
 
+import br.edu.unoesc.equipeA.componente.RenderizaCombo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cerveja {
+public class Cerveja implements Entidade, RenderizaCombo {
 
 	private Long codigo;
 	private String nome;
@@ -22,5 +23,15 @@ public class Cerveja {
 	private Cor cor;
 	private Nacionalidade nacionalidade;
 	private Estilo estilo;
+
+	public Cerveja(Long codigo) {
+		this.codigo = codigo;
+	}
+
+	@Override
+	public String getText() {
+		// TODO Auto-generated method stub
+		return getNome();
+	}
 
 }

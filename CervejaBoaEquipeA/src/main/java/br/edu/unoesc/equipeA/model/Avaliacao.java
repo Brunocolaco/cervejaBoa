@@ -17,4 +17,7 @@ public class Avaliacao {
 	private Long nota;
 	private Double preco;
 	private Date data;
+
+	public Usuario usuario;
+	public Cerveja cerveja;
 }
