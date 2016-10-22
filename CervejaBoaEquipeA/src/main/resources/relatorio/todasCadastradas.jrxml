@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-10-16T15:45:31 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="todasCadastradas" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="085e91e8-b499-4a49-be2d-f26218921aca">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2VydmVqYWJvYS5jZXJ2ZWphIEFTICw5MywyMSwzYzVmZGNhNC04MTllLTQ3NDYtYjhlZi0wZWI5&#xA;NzM3MWFkM2Q7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT cervejaboa.cerveja.`Nome`,
+	cervejaboa.cerveja.`DescricaoCerveja`,
+	cervejaboa.cerveja.`TeorAlcoolico`,
+	cervejaboa.cerveja.`TemperaturaIdeal`,
+	cervejaboa.cerveja.`ProporcaoodemaltedeCevada`,
+	cervejaboa.cerveja.`Preco`
+FROM cervejaboa.cerveja]]>
+	</queryString>
+	<field name="Nome" class="java.lang.String"/>
+	<field name="DescricaoCerveja" class="java.lang.String"/>
+	<field name="TeorAlcoolico" class="java.lang.Double"/>
+	<field name="TemperaturaIdeal" class="java.lang.Double"/>
+	<field name="ProporcaoodemaltedeCevada" class="java.lang.Double"/>
+	<field name="Preco" class="java.lang.Double"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="d452ad17-e1d3-42c5-8575-3d0a5f0ced51"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="0e08019c-5865-4431-8eea-b1fc3a635cdb"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Relátorio]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="371" y="50" width="204" height="32" forecolor="#FFFFFF" uuid="57905c82-a3f3-4991-be3b-7fa3af286453"/>
+					<textElement textAlignment="Right">
+						<font size="20" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cervejas Cadastradas]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" forecolor="#666666" uuid="6922817d-c8a4-40ad-85a3-15982fb4e25d"/>
+			</line>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="150" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="952d1e21-7f06-40b4-a8e1-a23c41e093f7"/>
+				<box padding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="150" y="0" width="110" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="f2f7b67f-f306-47e1-863d-0b18708dc382"/>
+				<box padding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teor Alcoólico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="260" y="0" width="108" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="13793a42-7e6a-4ddf-8662-a3f41a62f30e"/>
+				<box padding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Temperatura
+Ideal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="368" y="0" width="102" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="8598543d-8efe-46f3-ac68-b894af1e41af"/>
+				<box padding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Proporção de
+malte de Cevada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="470" y="0" width="84" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="7cc2627f-05a7-4894-9895-6fa9b4061f0b"/>
+				<box padding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Preço]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="f4dca7f0-941b-41b8-a4ed-a6ddddafbf7d"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="150" height="20" uuid="47e101db-5b3f-4105-89f5-b19f3d9cce86"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nome}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##.##%">
+				<reportElement x="150" y="0" width="110" height="20" uuid="ce9b70fa-3d04-4609-a1cb-3f195b004491"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TeorAlcoolico}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##.##º">
+				<reportElement x="260" y="0" width="108" height="20" uuid="a73190a2-9318-4a18-8d61-7e43a747f6a0"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+					<paragraph lineSpacing="Double"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TemperaturaIdeal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##.##%">
+				<reportElement x="368" y="0" width="102" height="20" uuid="cc9e9ccc-0a49-467a-92fa-52ff6d0ac53d"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ProporcaoodemaltedeCevada}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="¤#,##0.00#;¤-#,##0.00#" isBlankWhenNull="true">
+				<reportElement x="470" y="0" width="82" height="20" uuid="229db436-000d-4830-a79d-3694be68cc7f"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Preco}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="db411cec-1731-4121-b805-97148be3d815"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="a7268069-52e0-480b-b4d8-ea3ed726dd02"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="d MMMM, yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="8795ba13-87b7-4bec-8aa3-4dfeef10768f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

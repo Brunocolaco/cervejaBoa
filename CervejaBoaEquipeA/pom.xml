@@ -18,7 +18,7 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-		</plugins>
+		</plugins>	
 	</build>
 
 	<dependencies>
@@ -42,6 +42,11 @@
 			<groupId>com.jfoenix</groupId>
 			<artifactId>jfoenix</artifactId>
 			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.3.1</version>
 		</dependency>
 	</dependencies>
 </project>

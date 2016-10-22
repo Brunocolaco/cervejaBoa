@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-10-16T15:39:37 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="nacionalidade" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="51674f54-af34-40ca-897d-e418c8fce78f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2VydmVqYWJvYS5jZXJ2ZWphIEFTICwyNTgsNzQsZjhmMWUxMmEtM2I2OC00ZTcwLTk3NTUtNzI2&#xA;Y2JhNjQwNzlmO2NlcnZlamFib2EubmFjaW9uYWxpZGFkZSBBUyAsMzAsMTcsN2I1MmI3N2QtNGM0&#xA;MS00ZTg3LWExNjMtMzc3YTAyNDliMGZkOw=="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT cervejaboa.nacionalidade.`NomePais`,
+	cervejaboa.cerveja.`Nome`,
+	cervejaboa.nacionalidade.`NomePais`
+FROM cervejaboa.cerveja
+	INNER JOIN cervejaboa.nacionalidade ON 
+	 cervejaboa.cerveja.`idNacionalidade` = cervejaboa.nacionalidade.`idNacionalidade`]]>
+	</queryString>
+	<field name="NomePais" class="java.lang.String"/>
+	<field name="Nome" class="java.lang.String"/>
+	<field name="COLUMN_3" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="4014930f-8efb-4f69-9ad4-b68cbdfa64d8"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="49386e37-6332-416a-b2ce-58a70b97e80f"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Relatório]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="400" y="50" width="175" height="33" forecolor="#FFFFFF" uuid="afb04f03-77fa-471b-b20f-92035096a450"/>
+					<textElement textAlignment="Right">
+						<font size="20" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Nacionalidade]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" forecolor="#666666" uuid="21999b42-4fd7-40d3-a40e-c814107f0d53"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="290" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="1048992b-31f7-4daf-83fc-0bf4e017ff53"/>
+				<box leftPadding="1">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome dos Países]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="290" y="0" width="264" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="077db856-bfec-4d22-89aa-10a60816d69a"/>
+				<box leftPadding="1">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome das Cervejas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="c36f0fd8-420e-4953-aa96-03bf4740080e"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="290" height="20" uuid="93f711e9-3f4f-4680-a800-a409600404fb"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NomePais}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="290" y="-1" width="264" height="20" uuid="e84a0a77-3460-4ada-a9c6-f389f4f093d5"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="8d555d12-a077-4038-9e10-1d23ef7f9b6c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="856caa4d-a82a-4810-bc4a-05fffc321367"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="d MMMM, yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="67e71bf1-b42a-43d4-9dbf-04f135eeca1c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
