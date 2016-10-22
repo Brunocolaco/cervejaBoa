@@ -16,6 +16,11 @@ public class Cerveja {
 	private Double temperatura;
 	private Double propmalte;
 	private Double preco;
-	private Byte imagem;
+	private byte[] imagem;
+
+	private Copo copo;
+	private Cor cor;
+	private Nacionalidade nacionalidade;
+	private Estilo estilo;
 
 }

@@ -30,7 +30,7 @@ public class CopoJDBC implements CopoDAO {
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
 			ps.setString(1, objeto.getNome());
-			ps.setByte(2, objeto.getTipocopo());
+			ps.setBytes(2, objeto.getTipocopo());
 			ps.executeUpdate();
 			// Popular o objeto com o código gerado.
 			ResultSet rs = ps.getGeneratedKeys();
@@ -49,7 +49,7 @@ public class CopoJDBC implements CopoDAO {
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(update);
 			ps.setString(1, objeto.getNome());
-			ps.setByte(2, objeto.getTipocopo());
+			ps.setBytes(2, objeto.getTipocopo());
 			ps.setLong(3, objeto.getCodigo());
 			ps.executeUpdate();
 		} catch (SQLException e) {
@@ -136,7 +136,7 @@ public class CopoJDBC implements CopoDAO {
 	}
 
 	private Copo getCopo(ResultSet rs) throws SQLException {
-		Copo copo = new Copo(rs.getLong("idCopo"), rs.getString("Nome"), rs.getByte("TipoCopo"));
+		Copo copo = new Copo(rs.getLong("idCopo"), rs.getString("Nome"), rs.getBytes("TipoCopo"));
 		return copo;
 	}
 
