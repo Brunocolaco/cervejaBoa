@@ -92,7 +92,7 @@ public class CervejaJBDC implements CervejaDAO {
 
 	private Cerveja getCerveja(ResultSet rs) throws SQLException {
 		Cerveja cerveja = new Cerveja(rs.getLong("idCerveja"), rs.getString("nome"), rs.getString("DescricaoCerveja"),
-				rs.getDouble("TeorAlcolico"), rs.getDouble("TemperaturaIdeal"),
+				rs.getDouble("TeorAlcoolico"), rs.getDouble("TemperaturaIdeal"),
 				rs.getDouble("ProporcaoodemaltedeCevada"), rs.getDouble("Preco"), rs.getBytes("Imagem"),
 				new Copo(rs.getLong("idCopo")), new Cor(rs.getLong("idCor")),
 				new Nacionalidade(rs.getLong("idNacionalidade")), new Estilo(rs.getLong("idEstilo")));
