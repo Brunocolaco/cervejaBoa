@@ -4,43 +4,30 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexaoMysqlProducao implements Conexao {
+public class ConexaoLogin {
 	private static Connection connection;
-
 	static {
-		createConnection();
-	}
-
-	private static void createConnection() {
-		String url = "jdbc:mysql://localhost:3306/cervejaBoa";
+		String url = "jdbc:mysql://localhost:3306/cervejaboa";
 		String user = "root";
 		String password = "";
 		try {
 			connection = DriverManager.getConnection(url, user, password);
 		} catch (SQLException ex) {
 			ex.printStackTrace();
-			System.out.println("Erro de conex√£o com o banco de dados");
+			System.out.println("Erro de conex„o com o banco de dados");
 		}
 	}
 
-	public Connection get() {
-		try {
-			if (connection.isClosed()) {
-				createConnection();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+	public static Connection get() {
 		return connection;
 	}
 
-	public void close() {
+	public static void close() {
 		try {
 			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("Erro ao fechar conex√£o");
+			System.out.println("Erro ao fechar conex„o");
 		}
 	}
-
 }
