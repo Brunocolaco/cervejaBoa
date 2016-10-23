@@ -28,6 +28,34 @@ public class Cerveja implements Entidade, RenderizaCombo {
 		this.codigo = codigo;
 	}
 
+	public String getNomeCopo() {
+		if (copo != null) {
+			return copo.getNome();
+		}
+		return "";
+	}
+
+	public String getNomeCor() {
+		if (cor != null) {
+			return cor.getNome();
+		}
+		return "";
+	}
+
+	public String getNomeEstilo() {
+		if (estilo != null) {
+			return estilo.getNome();
+		}
+		return "";
+	}
+
+	public String getNomeNacionalidade() {
+		if (nacionalidade != null) {
+			return nacionalidade.getNome();
+		}
+		return "";
+	}
+
 	@Override
 	public String getText() {
 		// TODO Auto-generated method stub

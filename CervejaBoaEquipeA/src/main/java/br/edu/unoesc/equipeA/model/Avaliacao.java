@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Avaliacao {
+public class Avaliacao implements Entidade {
 
 	private Long codigo;
 	private String descricaoaval;
