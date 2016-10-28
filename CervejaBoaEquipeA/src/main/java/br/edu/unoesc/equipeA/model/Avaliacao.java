@@ -10,11 +10,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Avaliacao {
+public class Avaliacao implements Entidade {
 
 	private Long codigo;
 	private String descricaoaval;
 	private Long nota;
 	private Double preco;
 	private Date data;
+
+	public Usuario usuario;
+	public Cerveja cerveja;
 }

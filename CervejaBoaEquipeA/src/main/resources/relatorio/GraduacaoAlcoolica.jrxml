@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-10-16T15:39:37 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="GraduacaoAlcoolica" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e9652c4-d09d-4ac5-bb64-a245f02fa2a0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2VydmVqYWJvYS5jZXJ2ZWphIEFTICwxNDAsOTUsYzExZDEzYjEtMDQzOS00MzVmLWEzOTEtMjMw&#xA;NTdmZmIwZmNjOw=="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT cervejaboa.cerveja.`Nome`,
+	cervejaboa.cerveja.`TeorAlcoolico`
+FROM cervejaboa.cerveja]]>
+	</queryString>
+	<field name="Nome" class="java.lang.String"/>
+	<field name="TeorAlcoolico" class="java.lang.Double"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="2410f121-84e1-4d0e-8b33-75b2b84085cc"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="404a447d-5b62-4c8c-b6b1-184e607fb515"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Relatório]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="50" width="180" height="32" forecolor="#FFFFFF" uuid="6c2d813b-5c3b-4359-a27b-8a7a38a6ea1f"/>
+					<textElement textAlignment="Right">
+						<font size="20" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Teor Alcoólico]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23">
+			<line>
+				<reportElement x="0" y="22" width="555" height="1" forecolor="#666666" uuid="84d24f8d-d409-43c8-9421-443788e7ca2c"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c74771f4-934f-4675-9d65-d03ee6e7721a"/>
+				<box leftPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome da Cerveja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f42e48af-b841-4168-af2f-f7173c45bf65"/>
+				<box leftPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teor Alcoólico]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="98e7071b-22b2-4e36-8b6d-3fbd344f9584"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="277" height="20" uuid="26c46649-6081-491a-8bbc-4b42b9badfa3"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nome}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##.##%">
+				<reportElement x="277" y="0" width="277" height="20" uuid="892459ce-b40a-46b0-bc1e-0fa3eef5fc63"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TeorAlcoolico}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="2e707c21-ff8d-40fc-a19c-0aaf5f1ab169"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="d40c7c2e-ac74-493a-8dc4-84fd0607556b"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="d MMMM, yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="6392a309-d006-4aa2-8954-ab694dc18fa3"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

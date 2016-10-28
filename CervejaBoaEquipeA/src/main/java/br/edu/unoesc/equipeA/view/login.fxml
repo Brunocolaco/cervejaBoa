@@ -5,39 +5,39 @@
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="505.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unoesc.equipeA.controller.loginController">
    <children>
-      <Pane prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane prefHeight="600.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXPasswordField layoutX="114.0" layoutY="256.0" maxWidth="294.0" minWidth="186.0" prefHeight="54.0" prefWidth="294.0" promptText="Senha">
+            <Label layoutX="131.0" layoutY="45.0" prefHeight="48.0" prefWidth="170.0" text="CERVEJA BOA">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfUsuario" layoutX="98.0" layoutY="128.0" maxWidth="294.0" minWidth="210.0" prefHeight="54.0" prefWidth="227.0" promptText="Usuário">
+               <font>
+                  <Font size="22.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="tfSenha" layoutX="97.0" layoutY="192.0" maxWidth="294.0" minWidth="186.0" prefHeight="54.0" prefWidth="227.0" promptText="Senha">
                <font>
                   <Font size="22.0" />
                </font></JFXPasswordField>
-            <JFXTextField layoutX="114.0" layoutY="195.0" maxWidth="294.0" minWidth="210.0" prefHeight="54.0" prefWidth="294.0" promptText="Usuário">
-               <font>
-                  <Font size="22.0" />
-               </font></JFXTextField>
-            <JFXCheckBox layoutX="273.0" layoutY="423.0" text="Lembre-me" />
-            <JFXTextField layoutX="114.0" layoutY="331.0" maxWidth="294.0" minWidth="197.0" prefHeight="54.0" prefWidth="294.0" promptText="E-mail:">
-               <font>
-                  <Font size="22.0" />
-               </font></JFXTextField>
-            <JFXButton defaultButton="true" layoutX="126.0" layoutY="411.0" prefHeight="45.0" prefWidth="123.0" text="Login">
+            <JFXButton fx:id="btnLogin" defaultButton="true" layoutX="238.0" layoutY="259.0" onAction="#onLogar" prefHeight="34.0" prefWidth="81.0" text="Login">
                <font>
                   <Font size="21.0" />
                </font>
             </JFXButton>
-            <Hyperlink layoutX="123.0" layoutY="470.0" text="Esqueceu sua Senha?" />
-            <TextField layoutX="176.0" layoutY="101.0" prefHeight="48.0" prefWidth="170.0" text="CERVEJA BOA">
+            <JFXCheckBox fx:id="cbLembrar" layoutX="111.0" layoutY="273.0" prefHeight="17.0" prefWidth="120.0" text="Lembre-me" />
+            <Hyperlink fx:id="lbEsqueceu" layoutX="151.0" layoutY="341.0" text="Esqueceu sua Senha?" />
+            <JFXTextField fx:id="tfEmail" layoutX="51.0" layoutY="378.0" maxWidth="329.0" minWidth="197.0" prefHeight="54.0" prefWidth="329.0" promptText="E-mail:">
                <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </TextField>
+                  <Font size="22.0" />
+               </font></JFXTextField>
          </children>
       </Pane>
    </children>

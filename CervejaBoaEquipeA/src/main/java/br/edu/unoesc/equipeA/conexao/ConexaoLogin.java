@@ -4,15 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexaoMysqlProducao implements Conexao {
+public class ConexaoLogin {
 	private static Connection connection;
-
 	static {
-		createConnection();
-	}
-
-	private static void createConnection() {
-		String url = "jdbc:mysql://localhost:3306/cervejaBoa";
+		String url = "jdbc:mysql://localhost:3306/cervejaboa";
 		String user = "root";
 		String password = "";
 		try {
@@ -23,18 +18,11 @@ public class ConexaoMysqlProducao implements Conexao {
 		}
 	}
 
-	public Connection get() {
-		try {
-			if (connection.isClosed()) {
-				createConnection();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+	public static Connection get() {
 		return connection;
 	}
 
-	public void close() {
+	public static void close() {
 		try {
 			connection.close();
 		} catch (SQLException e) {
@@ -42,5 +30,4 @@ public class ConexaoMysqlProducao implements Conexao {
 			System.out.println("Erro ao fechar conexão");
 		}
 	}
-
 }

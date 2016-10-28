@@ -1,6 +1,7 @@
 package br.edu.unoesc.equipeA.controller;
 
 import com.jfoenix.controls.JFXTextField;
+
 import br.edu.unoesc.equipeA.model.Avaliacao;
 import br.edu.unoesc.equipeA.model.Cerveja;
 import javafx.event.ActionEvent;
@@ -50,7 +51,6 @@ public class buscarController {
 
 	@FXML
 	void onNovo(ActionEvent event) {
-
 	}
 
 }

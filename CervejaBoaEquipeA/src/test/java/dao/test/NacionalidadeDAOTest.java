@@ -4,10 +4,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Collection;
+
 import org.junit.Test;
+
 import br.edu.unoesc.equipeA.dao.NacionalidadeDAO;
 import br.edu.unoesc.equipeA.factory.DAOFactory;
-
 import br.edu.unoesc.equipeA.model.Nacionalidade;
 
 public class NacionalidadeDAOTest {
