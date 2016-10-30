@@ -12,16 +12,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="603.0" prefWidth="1101.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="561.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unoesc.equipeA.controller.buscarController">
    <children>
       <Pane />
-      <Text layoutX="173.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUSCAR CERVEJA: ">
+      <Text layoutX="50.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Busque a cerveja pelo nome:">
          <font>
             <Font size="29.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="tfBuscar" layoutX="413.0" layoutY="74.0" maxWidth="543.0" minWidth="400.0" prefHeight="37.0" prefWidth="543.0" />
-      <MenuBar layoutX="-6.0" layoutY="-2.0" prefHeight="32.0" prefWidth="1108.0">
+      <JFXTextField fx:id="tfBuscar" layoutX="431.0" layoutY="100.0" maxWidth="543.0" minWidth="249.0" onKeyPressed="#onPesquisar" prefHeight="37.0" prefWidth="249.0" />
+      <MenuBar layoutX="-6.0" layoutY="-2.0" prefHeight="32.0" prefWidth="878.0">
         <menus>
           <Menu mnemonicParsing="false" text="Cadastro">
             <items>
@@ -45,21 +45,13 @@
             </Menu>
         </menus>
       </MenuBar>
-      <TableView fx:id="tvCerveja" layoutX="11.0" layoutY="259.0" prefHeight="371.0" prefWidth="1082.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="8.0">
+      <TableView fx:id="tvCerveja" layoutX="18.0" layoutY="181.0" prefHeight="366.0" prefWidth="522.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="328.0">
          <columns>
-            <TableColumn fx:id="tcNome" prefWidth="255.0" text="Nome" />
-            <TableColumn fx:id="tcAvaliacao" prefWidth="200.0" text="Nacionalidade" />
-            <TableColumn fx:id="tcValor" minWidth="0.0" prefWidth="99.0" text="Valor" />
-            <TableColumn fx:id="tcAvaliacao" minWidth="0.0" prefWidth="419.0" text="Avaliação" />
+            <TableColumn fx:id="tcNome" prefWidth="217.0" text="Nome" />
+            <TableColumn fx:id="tcNacionalidade" prefWidth="205.0" text="Nacionalidade" />
+            <TableColumn fx:id="tcValor" minWidth="0.0" prefWidth="98.0" text="Valor" />
          </columns>
       </TableView>
-      <JFXButton cancelButton="true" layoutX="956.0" layoutY="70.0" onAction="#onBuscar" text="BUSCAR">
-         <font>
-            <Font name="Gadugi Bold" size="21.0" />
-         </font></JFXButton>
-      <JFXButton blendMode="DARKEN" defaultButton="true" layoutX="421.0" layoutY="158.0" onAction="#onAvaliar" prefHeight="45.0" prefWidth="95.0" text="Avaliar" textFill="#323030" />
-      <JFXButton defaultButton="true" layoutX="539.0" layoutY="158.0" onAction="#onExcluir" prefHeight="45.0" prefWidth="95.0" text="Excluir" />
-      <JFXButton defaultButton="true" layoutX="650.0" layoutY="158.0" onAction="#onAlterar" prefHeight="45.0" prefWidth="95.0" text="Alterar" />
-      <JFXButton defaultButton="true" layoutX="759.0" layoutY="158.0" onAction="#onNovo" prefHeight="45.0" prefWidth="95.0" text="Novo" />
+      <JFXButton blendMode="DARKEN" defaultButton="true" layoutX="700.0" layoutY="96.0" onAction="#onAvaliar" prefHeight="45.0" prefWidth="95.0" text="Avaliar" textFill="#323030" />
    </children>
 </AnchorPane>
