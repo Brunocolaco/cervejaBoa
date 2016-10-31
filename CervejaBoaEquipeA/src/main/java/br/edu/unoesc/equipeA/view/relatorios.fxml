@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXTogglePane?>
 <?import javafx.scene.control.Menu?>
@@ -35,7 +36,6 @@
             </Menu>
          </menus>
       </MenuBar>
-      <JFXCheckBox layoutX="986.0" layoutY="525.0" onAction="#onCadastradasUsuario" text="Cadastrados pelo Usuário" />
       <JFXCheckBox layoutX="14.0" layoutY="339.0" onAction="#onMaiorNota" text="Maior Nota">
          <font>
             <Font size="30.0" />
@@ -52,15 +52,6 @@
          <font>
             <Font size="30.0" />
          </font></JFXCheckBox>
-      <JFXCheckBox layoutX="15.0" layoutY="54.0" onAction="#onCadastradas" text="Todas Cadastradas">
-         <font>
-            <Font size="30.0" />
-         </font></JFXCheckBox>
-      <JFXCheckBox layoutX="996.0" layoutY="465.0" onAction="#onNaoAvaliadas" text="Não Avaliadas" />
-      <JFXCheckBox layoutX="14.0" layoutY="90.0" onAction="#onEstilo" text="Estilo ">
-         <font>
-            <Font size="30.0" />
-         </font></JFXCheckBox>
       <JFXCheckBox layoutX="15.0" layoutY="208.0" onAction="#onAlcoolica" text="Graduação Alcoólica">
          <font>
             <Font size="30.0" />
@@ -73,5 +64,8 @@
          <font>
             <Font size="30.0" />
          </font></JFXCheckBox>
+      <JFXButton defaultButton="true" layoutX="719.0" layoutY="75.0" onAction="#onCadastradas" text="Todas Cadastradas" />
+      <JFXButton layoutX="739.0" layoutY="152.0" onAction="#onEstilo" text="Estilo" />
+      <JFXButton layoutX="707.0" layoutY="208.0" text="Proporção d Malte de Cevada" />
    </children>
 </AnchorPane>
