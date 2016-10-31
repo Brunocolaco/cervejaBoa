@@ -13,7 +13,7 @@ import net.sf.jasperreports.view.JasperViewer;
 
 public class relatoriosController {
 
-	private CervejaDAO cervejaDAO;
+	public CervejaDAO cervejaDAO;
 
 	public relatoriosController() {
 		cervejaDAO = DAOFactory.get().cervejaDAO();
