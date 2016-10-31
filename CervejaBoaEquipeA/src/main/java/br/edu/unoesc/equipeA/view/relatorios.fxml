@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTogglePane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unoesc.equipeA.controller.relatoriosController">
+   <children>
+      <JFXTogglePane />
+      <MenuBar layoutY="-2.0" prefHeight="37.0" prefWidth="1280.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Cadastro">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cerveja" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Avaliações">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Avaliar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relatórios">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Ranking" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Cervejas">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Buscar" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <JFXCheckBox layoutX="14.0" layoutY="339.0" onAction="#onMaiorNota" text="Maior Nota">
+         <font>
+            <Font size="30.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox indeterminate="true" layoutX="18.0" layoutY="408.0" onAction="#onMenorNota" text="Menor Nota">
+         <font>
+            <Font size="30.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox layoutX="28.0" layoutY="486.0" onAction="#onMaiorValor" text="Maior Valor">
+         <font>
+            <Font size="30.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox layoutX="8.0" layoutY="555.0" onAction="#onMenorValor" text="Menor Valor">
+         <font>
+            <Font size="30.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox layoutX="15.0" layoutY="208.0" onAction="#onAlcoolica" text="Graduação Alcoólica">
+         <font>
+            <Font size="30.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox layoutX="15.0" layoutY="145.0" onAction="#onMalteCevada" text="Proporção de Malte/Cevada">
+         <font>
+            <Font size="30.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox layoutX="15.0" layoutY="287.0" onAction="#onNacionalidade" text=" Nacionalidade">
+         <font>
+            <Font size="30.0" />
+         </font></JFXCheckBox>
+
+      <JFXButton defaultButton="true" layoutX="719.0" layoutY="75.0" onAction="#onCadastradas" text="Todas Cadastradas" />
+      <JFXButton layoutX="739.0" layoutY="152.0" onAction="#onEstilo" text="Estilo" />
+      <JFXButton layoutX="707.0" layoutY="208.0" text="Proporção d Malte de Cevada" />
+   <Button layoutX="1014.0" layoutY="231.0" mnemonicParsing="false" text="Button" />
+
+   </children>
+</AnchorPane>
