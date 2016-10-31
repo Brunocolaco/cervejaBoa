@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2016-10-16T15:39:37 -->
+<!-- 2016-10-29T14:02:51 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="GraduacaoAlcoolica" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e9652c4-d09d-4ac5-bb64-a245f02fa2a0">
 	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2VydmVqYWJvYS5jZXJ2ZWphIEFTICwxNDAsOTUsYzExZDEzYjEtMDQzOS00MzVmLWEzOTEtMjMw&#xA;NTdmZmIwZmNjOw=="/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
@@ -17,18 +17,18 @@ FROM cervejaboa.cerveja]]>
 	<title>
 		<band height="72">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="2410f121-84e1-4d0e-8b33-75b2b84085cc"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#0A0D0C" uuid="2410f121-84e1-4d0e-8b33-75b2b84085cc"/>
 				<staticText>
-					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="404a447d-5b62-4c8c-b6b1-184e607fb515"/>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFCC00" uuid="404a447d-5b62-4c8c-b6b1-184e607fb515"/>
 					<textElement>
 						<font size="34" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Relatório]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="395" y="50" width="180" height="32" forecolor="#FFFFFF" uuid="6c2d813b-5c3b-4359-a27b-8a7a38a6ea1f"/>
+					<reportElement x="395" y="50" width="180" height="32" forecolor="#FFCC00" uuid="6c2d813b-5c3b-4359-a27b-8a7a38a6ea1f"/>
 					<textElement textAlignment="Right">
-						<font size="20" isBold="false"/>
+						<font size="22" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Teor Alcoólico]]></text>
 				</staticText>
@@ -44,7 +44,7 @@ FROM cervejaboa.cerveja]]>
 				<reportElement x="0" y="22" width="555" height="1" forecolor="#666666" uuid="84d24f8d-d409-43c8-9421-443788e7ca2c"/>
 			</line>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c74771f4-934f-4675-9d65-d03ee6e7721a"/>
+				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#F2DB0A" backcolor="#0A0303" uuid="c74771f4-934f-4675-9d65-d03ee6e7721a"/>
 				<box leftPadding="1">
 					<pen lineWidth="1.0"/>
 				</box>
@@ -54,7 +54,7 @@ FROM cervejaboa.cerveja]]>
 				<text><![CDATA[Nome da Cerveja]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f42e48af-b841-4168-af2f-f7173c45bf65"/>
+				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#F2DB0A" backcolor="#0A0303" uuid="f42e48af-b841-4168-af2f-f7173c45bf65"/>
 				<box leftPadding="1">
 					<pen lineWidth="1.0"/>
 				</box>

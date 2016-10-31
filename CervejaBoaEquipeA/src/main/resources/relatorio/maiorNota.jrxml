@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2016-10-22T08:56:47 -->
+<!-- 2016-10-29T14:13:53 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="maiorNota" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c009016d-76f9-4d19-9c28-5c60c45db412">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
@@ -17,18 +17,18 @@ order by avaliacao.Nota desc]]>
 	<title>
 		<band height="72">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="a24bb69a-7057-41d5-b7bf-d1d652a0b545"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#000000" uuid="a24bb69a-7057-41d5-b7bf-d1d652a0b545"/>
 				<staticText>
-					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="f54666ec-85c9-44a3-85bc-9fc67e7881eb"/>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFCC00" uuid="f54666ec-85c9-44a3-85bc-9fc67e7881eb"/>
 					<textElement>
 						<font size="34" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Relátorio]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="390" y="50" width="180" height="33" forecolor="#FFFFFF" uuid="2a11946a-f96e-4e87-845c-08620b6b9e55"/>
+					<reportElement x="390" y="50" width="180" height="33" forecolor="#FFCC00" uuid="2a11946a-f96e-4e87-845c-08620b6b9e55"/>
 					<textElement textAlignment="Right">
-						<font size="20" isBold="false"/>
+						<font size="24" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Maior Nota]]></text>
 				</staticText>
@@ -44,7 +44,7 @@ order by avaliacao.Nota desc]]>
 				<reportElement x="0" y="22" width="555" height="1" forecolor="#666666" uuid="b07ba00c-ff68-4225-9392-384dd7be34c9"/>
 			</line>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f2e6b096-49bb-4f7f-b9ee-88f23c57f886"/>
+				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#FFCC00" backcolor="#000000" uuid="f2e6b096-49bb-4f7f-b9ee-88f23c57f886"/>
 				<box leftPadding="1">
 					<pen lineWidth="1.0"/>
 				</box>
@@ -54,7 +54,7 @@ order by avaliacao.Nota desc]]>
 				<text><![CDATA[Nome]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3e42852e-425f-48bb-8d1b-82bb06264091"/>
+				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#FFCC00" backcolor="#000000" uuid="3e42852e-425f-48bb-8d1b-82bb06264091"/>
 				<box leftPadding="1">
 					<pen lineWidth="1.0"/>
 				</box>
@@ -100,7 +100,7 @@ order by avaliacao.Nota desc]]>
 				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="8f344ef2-1139-4090-83f6-800885517fe6"/>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
-			<textField pattern="EEEEE dd MMMMM yyyy">
+			<textField pattern="d MMMM, yyyy">
 				<reportElement x="0" y="4" width="100" height="13" uuid="f079bd18-1622-4749-ab36-c1eb24bb023f"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2016-10-16T15:45:31 -->
+<!-- 2016-10-29T14:19:06 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="todasCadastradas" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="085e91e8-b499-4a49-be2d-f26218921aca">
 	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2VydmVqYWJvYS5jZXJ2ZWphIEFTICw5MywyMSwzYzVmZGNhNC04MTllLTQ3NDYtYjhlZi0wZWI5&#xA;NzM3MWFkM2Q7"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
@@ -25,18 +25,18 @@ FROM cervejaboa.cerveja]]>
 	<title>
 		<band height="72">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="d452ad17-e1d3-42c5-8575-3d0a5f0ced51"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" forecolor="#FFCC00" backcolor="#080101" uuid="d452ad17-e1d3-42c5-8575-3d0a5f0ced51"/>
 				<staticText>
-					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="0e08019c-5865-4431-8eea-b1fc3a635cdb"/>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFCC00" backcolor="#080101" uuid="0e08019c-5865-4431-8eea-b1fc3a635cdb"/>
 					<textElement>
 						<font size="34" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Relátorio]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="371" y="50" width="204" height="32" forecolor="#FFFFFF" uuid="57905c82-a3f3-4991-be3b-7fa3af286453"/>
+					<reportElement x="320" y="50" width="255" height="32" forecolor="#FFCC00" backcolor="#080101" uuid="57905c82-a3f3-4991-be3b-7fa3af286453"/>
 					<textElement textAlignment="Right">
-						<font size="20" isBold="false"/>
+						<font size="24" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Cervejas Cadastradas]]></text>
 				</staticText>
@@ -53,7 +53,7 @@ FROM cervejaboa.cerveja]]>
 				<reportElement x="0" y="21" width="555" height="1" forecolor="#666666" uuid="6922817d-c8a4-40ad-85a3-15982fb4e25d"/>
 			</line>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="150" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="952d1e21-7f06-40b4-a8e1-a23c41e093f7"/>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="150" height="30" forecolor="#FFCC00" backcolor="#080101" uuid="952d1e21-7f06-40b4-a8e1-a23c41e093f7"/>
 				<box padding="1">
 					<pen lineWidth="1.0"/>
 				</box>
@@ -63,7 +63,7 @@ FROM cervejaboa.cerveja]]>
 				<text><![CDATA[Nome]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="150" y="0" width="110" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="f2f7b67f-f306-47e1-863d-0b18708dc382"/>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="150" y="0" width="110" height="30" forecolor="#FFCC00" backcolor="#080101" uuid="f2f7b67f-f306-47e1-863d-0b18708dc382"/>
 				<box padding="1">
 					<pen lineWidth="1.0"/>
 				</box>
@@ -73,7 +73,7 @@ FROM cervejaboa.cerveja]]>
 				<text><![CDATA[Teor Alcoólico]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="260" y="0" width="108" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="13793a42-7e6a-4ddf-8662-a3f41a62f30e"/>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="260" y="0" width="108" height="30" forecolor="#FFCC00" backcolor="#080101" uuid="13793a42-7e6a-4ddf-8662-a3f41a62f30e"/>
 				<box padding="1">
 					<pen lineWidth="1.0"/>
 				</box>
@@ -84,7 +84,7 @@ FROM cervejaboa.cerveja]]>
 Ideal]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="368" y="0" width="102" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="8598543d-8efe-46f3-ac68-b894af1e41af"/>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="368" y="0" width="102" height="30" forecolor="#FFCC00" backcolor="#080101" uuid="8598543d-8efe-46f3-ac68-b894af1e41af"/>
 				<box padding="1">
 					<pen lineWidth="1.0"/>
 				</box>
@@ -95,7 +95,7 @@ Ideal]]></text>
 malte de Cevada]]></text>
 			</staticText>
 			<staticText>
-				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="470" y="0" width="84" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="7cc2627f-05a7-4894-9895-6fa9b4061f0b"/>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="470" y="0" width="84" height="30" forecolor="#FFCC00" backcolor="#080101" uuid="7cc2627f-05a7-4894-9895-6fa9b4061f0b"/>
 				<box padding="1">
 					<pen lineWidth="1.0"/>
 				</box>
