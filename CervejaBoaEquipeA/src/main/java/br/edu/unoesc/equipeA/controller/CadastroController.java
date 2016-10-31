@@ -139,6 +139,7 @@ public class CadastroController {
 	void onSalvar(ActionEvent event) {
 		Cerveja cerveja = criaCerveja();
 		cervejaDAO.salvar(cerveja);
+		limparCampos();
 	}
 
 	private Cerveja criaCerveja() {
