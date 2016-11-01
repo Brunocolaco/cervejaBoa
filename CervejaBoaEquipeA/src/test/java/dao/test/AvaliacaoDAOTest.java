@@ -20,7 +20,7 @@ public class AvaliacaoDAOTest {
 		Avaliacao avaliacao = new Avaliacao();
 		avaliacao.setDescricaoaval(
 				"Cerveja boa daquelas de tomar na zona pagando 20 pila e ganhando um carinho das querida");
-		avaliacao.setNota((long) 10);
+		avaliacao.setNota(10.0);
 		avaliacao.setPreco(10.0);
 		avaliacao.setData(new Date(2016 - 01 - 01));
 		avaliacao.setCerveja(new Cerveja(1L));
@@ -35,7 +35,7 @@ public class AvaliacaoDAOTest {
 		Avaliacao avaliacao = new Avaliacao();
 		avaliacao.setDescricaoaval(
 				"Cerveja boa daquelas de tomar na zona pagando 20 pila e ganhando um carinho das querida");
-		avaliacao.setNota((long) 10);
+		avaliacao.setNota(10.0);
 		avaliacao.setPreco(10.0);
 		avaliacao.setData(new Date(2016 - 01 - 01));
 		avaliacao.setCerveja(new Cerveja(1L));
@@ -43,7 +43,7 @@ public class AvaliacaoDAOTest {
 		AvaliacaoDAO avaliacaoDAO = DAOFactory.get().avaliacaoDAO();
 		avaliacaoDAO.inserir(avaliacao);
 		avaliacao.setDescricaoaval("Cerveja ruim e quente o diabo do garçom me trouxe quente ainda por cima");
-		avaliacao.setNota((long) 1);
+		avaliacao.setNota(1.0);
 		avaliacao.setPreco(10.0);
 		avaliacao.setData(new Date(2017 - 01 - 01));
 		avaliacao.setCerveja(new Cerveja(1L));

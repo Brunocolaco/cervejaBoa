@@ -14,7 +14,7 @@ public class Avaliacao implements Entidade {
 
 	private Long codigo;
 	private String descricaoaval;
-	private Long nota;
+	private Double nota;
 	private Double preco;
 	private Date data;
 

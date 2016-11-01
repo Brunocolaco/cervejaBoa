@@ -28,7 +28,7 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
 			ps.setString(1, objeto.getDescricaoaval());
-			ps.setLong(2, objeto.getNota());
+			ps.setDouble(2, objeto.getNota());
 			ps.setDouble(3, objeto.getPreco());
 			ps.setDate(4, objeto.getData());
 			ps.setLong(5, objeto.getCerveja().getCodigo());
@@ -52,7 +52,7 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(update);
 			ps.setString(1, objeto.getDescricaoaval());
-			ps.setLong(2, objeto.getNota());
+			ps.setDouble(2, objeto.getNota());
 			ps.setDouble(3, objeto.getPreco());
 			ps.setDate(4, objeto.getData());
 			ps.setLong(5, objeto.getCerveja().getCodigo());
@@ -143,7 +143,7 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 
 	private Avaliacao getAvaliacao(ResultSet rs) throws SQLException {
 		Avaliacao avaliacao = new Avaliacao(rs.getLong("idAvaliacao"), rs.getString("DescricaoAvaliacao"),
-				rs.getLong("Nota"), rs.getDouble("Preco"), rs.getDate("DataAvaliacao"),
+				rs.getDouble("Nota"), rs.getDouble("Preco"), rs.getDate("DataAvaliacao"),
 				new Usuario(rs.getLong("idUsuario")), new Cerveja(rs.getLong("idCerveja")));
 		return avaliacao;
 	}
