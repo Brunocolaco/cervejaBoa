@@ -111,14 +111,10 @@ public class CadastroController {
 	}
 
 	private void limparCampos() {
-		cbCopo.getItems().clear();
-		montaComboCopo();
-		cbCor.getItems().clear();
-		montaComboCor();
-		cbEstilo.getItems().clear();
-		montaComboEstilo();
-		cbNacionalidade.getItems().clear();
-		montaComboNacionalidade();
+		cbCopo.setValue(null);
+		cbCor.setValue(null);
+		cbEstilo.setValue(null);
+		cbNacionalidade.setValue(null);
 		taDescricao.setText("");
 		tfNome.setText("");
 		tfTemperatura.setText("");
