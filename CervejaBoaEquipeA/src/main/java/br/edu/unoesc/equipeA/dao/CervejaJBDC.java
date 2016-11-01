@@ -25,19 +25,20 @@ public class CervejaJBDC implements CervejaDAO {
 
 	@Override
 	public void inserir(Cerveja objeto) {
-		String insert = "insert into cerveja (Nome,DescricaoCerveja,TeorAlcoolico,ProporcaoodemaltedeCevada,Preco,Imagem,idcopo,idcor,idnacionalidade,idestilo) values(?,?,?,?,?,?,?,?,?,?)";
+		String insert = "insert into cerveja (Nome,DescricaoCerveja,TemperaturaIdeal,TeorAlcoolico,ProporcaoodemaltedeCevada,Preco,Imagem,idcopo,idcor,idnacionalidade,idestilo) values(?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
 			ps.setString(1, objeto.getNome());
 			ps.setString(2, objeto.getDescricao());
 			ps.setDouble(3, objeto.getTeoralc());
-			ps.setDouble(4, objeto.getPropmalte());
-			ps.setDouble(5, objeto.getPreco());
-			ps.setBytes(6, objeto.getImagem());
-			ps.setLong(7, objeto.getCopo().getCodigo());
-			ps.setLong(8, objeto.getCor().getCodigo());
-			ps.setLong(9, objeto.getNacionalidade().getCodigo());
-			ps.setLong(10, objeto.getEstilo().getCodigo());
+			ps.setDouble(4, objeto.getTemperatura());
+			ps.setDouble(5, objeto.getPropmalte());
+			ps.setDouble(6, objeto.getPreco());
+			ps.setBytes(7, objeto.getImagem());
+			ps.setLong(8, objeto.getCopo().getCodigo());
+			ps.setLong(9, objeto.getCor().getCodigo());
+			ps.setLong(10, objeto.getNacionalidade().getCodigo());
+			ps.setLong(11, objeto.getEstilo().getCodigo());
 			ps.executeUpdate();
 			// Popular o objeto com o código gerado.
 			ResultSet rs = ps.getGeneratedKeys();
@@ -52,21 +53,22 @@ public class CervejaJBDC implements CervejaDAO {
 
 	@Override
 	public void alterar(Cerveja objeto) {
-		String update = "update cerveja set Nome = ?, DescricaoCerveja =?, TeorAlcoolico =?, ProporcaoodemaltedeCevada =? ,Preco =? ,Imagem = ?, idcopo=? ,idcor=? ,idnacionalidade=? ,idestilo=? "
+		String update = "update cerveja set Nome = ?, DescricaoCerveja =?, TeorAlcoolico =?,TemperaturaIdeal=? ProporcaoodemaltedeCevada =? ,Preco =? ,Imagem = ?, idcopo=? ,idcor=? ,idnacionalidade=? ,idestilo=? "
 				+ "where idCerveja = ?";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(update);
 			ps.setString(1, objeto.getNome());
 			ps.setString(2, objeto.getDescricao());
 			ps.setDouble(3, objeto.getTeoralc());
-			ps.setDouble(4, objeto.getPropmalte());
-			ps.setDouble(5, objeto.getPreco());
-			ps.setBytes(6, objeto.getImagem());
-			ps.setLong(7, objeto.getCopo().getCodigo());
-			ps.setLong(8, objeto.getCor().getCodigo());
-			ps.setLong(9, objeto.getNacionalidade().getCodigo());
-			ps.setLong(10, objeto.getEstilo().getCodigo());
-			ps.setLong(11, objeto.getCodigo());
+			ps.setDouble(4, objeto.getTemperatura());
+			ps.setDouble(5, objeto.getPropmalte());
+			ps.setDouble(6, objeto.getPreco());
+			ps.setBytes(7, objeto.getImagem());
+			ps.setLong(8, objeto.getCopo().getCodigo());
+			ps.setLong(9, objeto.getCor().getCodigo());
+			ps.setLong(10, objeto.getNacionalidade().getCodigo());
+			ps.setLong(11, objeto.getEstilo().getCodigo());
+			ps.setLong(12, objeto.getCodigo());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

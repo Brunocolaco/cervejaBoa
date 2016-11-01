@@ -10,7 +10,7 @@ public class ConexaoMysqlProducao implements Conexao {
 	static {
 		createConnection();
 	}
-
+// trocar usuario e senhar antes de ir pro git
 	private static void createConnection() {
 		String url = "jdbc:mysql://localhost:3306/cervejaBoa";
 		String user = "root";

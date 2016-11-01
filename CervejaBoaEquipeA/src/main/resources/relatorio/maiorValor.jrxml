@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2016-10-22T09:03:36 -->
+<!-- 2016-10-29T14:11:35 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="maiorValor" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="55000258-0bb2-44ec-a19a-92dc08aec2a2">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
@@ -17,18 +17,18 @@ order by avaliacao.Preco desc]]>
 	<title>
 		<band height="72">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="3e681c85-565f-49e2-9e4a-dec2b4996749"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#080101" uuid="3e681c85-565f-49e2-9e4a-dec2b4996749"/>
 				<staticText>
-					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="4a93f3af-a571-41f1-ba62-034b4dba1f61"/>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFCC00" uuid="4a93f3af-a571-41f1-ba62-034b4dba1f61"/>
 					<textElement>
 						<font size="34" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Relatório]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="395" y="50" width="180" height="33" forecolor="#FFFFFF" uuid="048099d9-7905-47bb-bb05-5f6b914d6770"/>
+					<reportElement x="395" y="50" width="180" height="33" forecolor="#FFCC00" uuid="048099d9-7905-47bb-bb05-5f6b914d6770"/>
 					<textElement textAlignment="Right">
-						<font size="20" isBold="false"/>
+						<font size="24" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Maior Valor]]></text>
 				</staticText>
@@ -44,14 +44,14 @@ order by avaliacao.Preco desc]]>
 				<reportElement x="0" y="20" width="554" height="1" forecolor="#666666" uuid="0ffbbc5f-68ed-45a3-8d8e-8b2da4bd75c8"/>
 			</line>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="ebd0c2a0-813f-4229-a59c-ec29493a60df"/>
+				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#FFCC00" backcolor="#080101" uuid="ebd0c2a0-813f-4229-a59c-ec29493a60df"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Nome]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="52843e7f-5eee-4550-ab0a-e33add488f1b"/>
+				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#FFCC00" backcolor="#080101" uuid="52843e7f-5eee-4550-ab0a-e33add488f1b"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>

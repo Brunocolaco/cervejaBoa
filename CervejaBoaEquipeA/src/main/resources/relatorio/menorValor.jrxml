@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2016-10-22T09:31:55 -->
+<!-- 2016-10-29T14:15:37 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="menorValor" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cd8a944b-c420-44d8-b665-6a26524dd32c">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
@@ -10,7 +10,7 @@
 FROM cerveja
 	join avaliacao ON 
 	 cerveja.`idCerveja` = avaliacao.`idCerveja` 
-ORDER BY avaliacao.nota ]]>
+ORDER BY avaliacao.nota]]>
 	</queryString>
 	<field name="Nome" class="java.lang.String"/>
 	<field name="Nota" class="java.lang.Integer"/>
@@ -20,18 +20,18 @@ ORDER BY avaliacao.nota ]]>
 	<title>
 		<band height="72">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="fd525e95-bd20-4e09-8bfb-0608836846ab"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" forecolor="#FFCC00" backcolor="#080101" uuid="fd525e95-bd20-4e09-8bfb-0608836846ab"/>
 				<staticText>
-					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="2ea7b3a9-1044-47c1-845f-1def1cb7f450"/>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFCC00" backcolor="#080101" uuid="2ea7b3a9-1044-47c1-845f-1def1cb7f450"/>
 					<textElement>
 						<font size="34" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Relatório]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="394" y="50" width="180" height="33" forecolor="#FFFFFF" uuid="0e744cef-bea8-4eb7-90a7-c6c6ea1f059a"/>
+					<reportElement x="394" y="50" width="180" height="33" forecolor="#FFCC00" backcolor="#080101" uuid="0e744cef-bea8-4eb7-90a7-c6c6ea1f059a"/>
 					<textElement textAlignment="Right">
-						<font size="20" isBold="false"/>
+						<font size="24" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Menor Valor]]></text>
 				</staticText>
@@ -47,7 +47,7 @@ ORDER BY avaliacao.nota ]]>
 				<reportElement x="0" y="21" width="555" height="1" forecolor="#666666" uuid="da2d9262-481f-41a9-b314-50ff70324f59"/>
 			</line>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="85386801-0a52-4cdb-a5b7-bb43f56e4bd9"/>
+				<reportElement mode="Opaque" x="0" y="0" width="277" height="20" forecolor="#FFCC00" backcolor="#080101" uuid="85386801-0a52-4cdb-a5b7-bb43f56e4bd9"/>
 				<box leftPadding="1">
 					<pen lineWidth="1.0"/>
 				</box>
@@ -57,7 +57,7 @@ ORDER BY avaliacao.nota ]]>
 				<text><![CDATA[Nome]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a5d8ce4d-9810-4390-9a64-792e018ec0c0"/>
+				<reportElement mode="Opaque" x="277" y="0" width="277" height="20" forecolor="#FFCC00" backcolor="#080101" uuid="a5d8ce4d-9810-4390-9a64-792e018ec0c0"/>
 				<box leftPadding="1">
 					<pen lineWidth="1.0"/>
 				</box>

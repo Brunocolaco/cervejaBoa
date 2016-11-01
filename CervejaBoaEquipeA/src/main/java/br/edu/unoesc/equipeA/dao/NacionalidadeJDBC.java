@@ -12,13 +12,13 @@ import br.edu.unoesc.equipeA.conexao.Conexao;
 import br.edu.unoesc.equipeA.model.Nacionalidade;
 
 public class NacionalidadeJDBC implements NacionalidadeDAO {
-	
+
 	private Conexao conexao;
-	
+
 	public NacionalidadeJDBC(Conexao conexao) {
 		this.conexao = conexao;
 	}
-	
+
 	@Override
 	public void inserir(Nacionalidade objeto) {
 		String insert = "insert into nacionalidade (NomePais) values(?)";
@@ -36,7 +36,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 			conexao.close();
 		}
 	}
-	
+
 	@Override
 	public void alterar(Nacionalidade objeto) {
 		String update = "update nacionalidade set NomePais=? where idNacionalidade=?";
@@ -51,7 +51,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 			conexao.close();
 		}
 	}
-	
+
 	@Override
 	public void excluir(Long codigo) {
 		String delete = "delete from nacionalidade where idNacionalidade=?";
@@ -65,7 +65,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 			conexao.close();
 		}
 	}
-	
+
 	@Override
 	public Collection<Nacionalidade> todos() {
 		String sql = "select * from nacionalidade";
@@ -80,8 +80,8 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 			conexao.close();
 		}
 		return nacionalidades;
-	} 
-	
+	}
+
 	@Override
 	public Nacionalidade get(Long codigo) {
 		String sql = "select * from nacionalidade where idNacionalidade=?";
@@ -101,7 +101,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 		}
 		return nacionalidade;
 	}
-	
+
 	@Override
 	public Collection<Nacionalidade> getPorNome(String nome) {
 		String sql = "select * from nacionalidade where NomePais=?";
@@ -118,7 +118,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 		}
 		return nacionalidades;
 	}
-	
+
 	private List<Nacionalidade> getLista(ResultSet rs) throws SQLException {
 		List<Nacionalidade> nacionalidades = new ArrayList<>();
 		while (rs.next()) {
@@ -126,7 +126,7 @@ public class NacionalidadeJDBC implements NacionalidadeDAO {
 		}
 		return nacionalidades;
 	}
-	
+
 	private Nacionalidade getNacionalidade(ResultSet rs) throws SQLException {
 		Nacionalidade nacionalidade = new Nacionalidade(rs.getLong("idNacionalidade"), rs.getString("NomePais"));
 		return nacionalidade;

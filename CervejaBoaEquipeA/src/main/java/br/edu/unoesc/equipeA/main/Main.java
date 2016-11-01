@@ -13,15 +13,16 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "Login.fxml"));
+			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "login.fxml"));
 			Scene scene = new Scene(root);
-			//scene.getStylesheets().add("/css/style.css");
+			// scene.getStylesheets().add("/css/style.css");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+
 	public static void main(String[] args) {
 		launch(args);
 	}

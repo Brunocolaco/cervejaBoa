@@ -1,7 +1,9 @@
 package br.edu.unoesc.equipeA.controller;
 
 import java.util.Collection;
+
 import com.jfoenix.controls.JFXTextField;
+
 import br.edu.unoesc.equipeA.dao.CervejaDAO;
 import br.edu.unoesc.equipeA.factory.DAOFactory;
 import br.edu.unoesc.equipeA.model.Cerveja;
@@ -46,25 +48,26 @@ public class buscarController {
 		tcNacionalidade.setCellValueFactory(new PropertyValueFactory<>("nome"));
 		tcValor.setCellValueFactory(new PropertyValueFactory<>("preco"));
 		atualizaTabela();
-		//ouvirSelecaoTabela();
+		// ouvirSelecaoTabela();
 	}
 
-	/*private void ouvirSelecaoTabela() {
-		tvCerveja.getSelectionModel().selectedItemProperty().addListener((observable, cvVelha, cvSelecionada) -> {
-			if (cvSelecionada != null) {
-				populaTela(cvSelecionada);
-			}
-		});
-	}*/
+	/*
+	 * private void ouvirSelecaoTabela() {
+	 * tvCerveja.getSelectionModel().selectedItemProperty().addListener((
+	 * observable, cvVelha, cvSelecionada) -> { if (cvSelecionada != null) {
+	 * populaTela(cvSelecionada); } }); }
+	 */
 
 	private void atualizaTabela() {
 		Collection<Cerveja> cervejas = cervejaDAO.todos();
 		tvCerveja.setItems(FXCollections.observableArrayList(cervejas));
 	}
 
-	/*private void populaTela(Cerveja cvSelecionada) {
-
-	}*/
+	/*
+	 * private void populaTela(Cerveja cvSelecionada) {
+	 * 
+	 * }
+	 */
 
 	@FXML
 	void onPesquisar(KeyEvent event) {
