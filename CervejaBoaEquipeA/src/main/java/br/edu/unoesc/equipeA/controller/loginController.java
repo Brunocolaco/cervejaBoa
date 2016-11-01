@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
 import javax.swing.JOptionPane;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.mysql.jdbc.Connection;
+
 import br.edu.unoesc.equipeA.conexao.ConexaoLogin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -63,7 +66,7 @@ public class loginController {
 				Stage stage = (Stage) node.getScene().getWindow();
 				Parent root = null;
 				try {
-					root = FXMLLoader.load(getClass().getResource("../view/cadastro.fxml"));
+					root = FXMLLoader.load(getClass().getResource("../view/principal.fxml"));
 				} catch (IOException ex) {
 				}
 				Scene scene = new Scene(root);
