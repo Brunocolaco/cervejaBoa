@@ -11,7 +11,6 @@ import java.util.List;
 import br.edu.unoesc.equipeA.conexao.Conexao;
 import br.edu.unoesc.equipeA.model.Avaliacao;
 import br.edu.unoesc.equipeA.model.Cerveja;
-import br.edu.unoesc.equipeA.model.Usuario;
 
 public class AvaliacaoJDBC implements AvaliacaoDAO {
 
@@ -24,7 +23,7 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 	@Override
 	public void inserir(Avaliacao objeto) {
 
-		String insert = "insert into Avaliacao (DescricaoAvaliacao, Nota, Preco, DataAvaliacao, idUsuario, idCerveja) values(?,?,?,?,?,?)";
+		String insert = "insert into Avaliacao (DescricaoAvaliacao, Nota, Preco, DataAvaliacao, idCerveja) values(?,?,?,?,?)";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
 			ps.setString(1, objeto.getDescricaoaval());
@@ -32,7 +31,6 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 			ps.setDouble(3, objeto.getPreco());
 			ps.setDate(4, objeto.getData());
 			ps.setLong(5, objeto.getCerveja().getCodigo());
-			ps.setLong(6, objeto.getUsuario().getCodigo());
 			ps.executeUpdate();
 			// Popular o objeto com o código gerado.
 			ResultSet rs = ps.getGeneratedKeys();
@@ -47,7 +45,7 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 
 	@Override
 	public void alterar(Avaliacao objeto) {
-		String update = "update avaliacao set Descricao =?, AvaliacaoNota=?, Preco=?, DataAvaliacao=?, idUsuario=?, idCerveja=?"
+		String update = "update avaliacao set Descricao =?, AvaliacaoNota=?, Preco=?, DataAvaliacao=?, idCerveja=?"
 				+ "where idAvaliacao = ?";
 		try {
 			PreparedStatement ps = conexao.get().prepareStatement(update);
@@ -56,8 +54,6 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 			ps.setDouble(3, objeto.getPreco());
 			ps.setDate(4, objeto.getData());
 			ps.setLong(5, objeto.getCerveja().getCodigo());
-			ps.setLong(6, objeto.getUsuario().getCodigo());
-			ps.setLong(7, objeto.getCodigo());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -144,7 +140,7 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 	private Avaliacao getAvaliacao(ResultSet rs) throws SQLException {
 		Avaliacao avaliacao = new Avaliacao(rs.getLong("idAvaliacao"), rs.getString("DescricaoAvaliacao"),
 				rs.getDouble("Nota"), rs.getDouble("Preco"), rs.getDate("DataAvaliacao"),
-				new Usuario(rs.getLong("idUsuario")), new Cerveja(rs.getLong("idCerveja")));
+				new Cerveja(rs.getLong("idCerveja")));
 		return avaliacao;
 	}
 

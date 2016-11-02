@@ -2,6 +2,7 @@ package br.edu.unoesc.equipeA.model;
 
 import java.sql.Date;
 
+import br.edu.unoesc.equipeA.componente.RenderizaCombo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,8 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class Avaliacao implements Entidade {
+public class Avaliacao implements Entidade, RenderizaCombo {
 
 	private Long codigo;
 	private String descricaoaval;
@@ -18,6 +18,12 @@ public class Avaliacao implements Entidade {
 	private Double preco;
 	private Date data;
 
-	public Usuario usuario;
 	public Cerveja cerveja;
+
+	@Override
+	public String getText() {
+		// TODO Auto-generated method stub
+		return getDescricaoaval();
+	}
+
 }
