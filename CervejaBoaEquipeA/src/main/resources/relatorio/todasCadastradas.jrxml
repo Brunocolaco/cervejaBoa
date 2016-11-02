@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2016-10-29T14:19:06 -->
+<!-- 2016-11-02T16:12:16 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="todasCadastradas" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="085e91e8-b499-4a49-be2d-f26218921aca">
 	<property name="com.jaspersoft.studio.data.sql.tables" value="Y2VydmVqYWJvYS5jZXJ2ZWphIEFTICw5MywyMSwzYzVmZGNhNC04MTllLTQ3NDYtYjhlZi0wZWI5&#xA;NzM3MWFkM2Q7"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
@@ -125,7 +125,7 @@ malte de Cevada]]></text>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{TeorAlcoolico}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true" pattern="#,##.##º">
+			<textField isStretchWithOverflow="true" pattern="-#,##.##º">
 				<reportElement x="260" y="0" width="108" height="20" uuid="a73190a2-9318-4a18-8d61-7e43a747f6a0"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>

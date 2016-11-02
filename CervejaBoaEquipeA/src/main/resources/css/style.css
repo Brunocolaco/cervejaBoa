@@ -1,0 +1,8 @@
+
+.botao{
+  -fx-background: #8B8B8B;
+  -fx-background: linear-gradient(top,  #A9A9A9,  #7A7A7A);
+  -fx-background: -ms-linear-gradient(top,  #A9A9A9,  #7A7A7A);
+  -fx-background: -webkit-gradient(linear, left top, left bottom, from(#A9A9A9), to(#7A7A7A));
+  -fx-background: -moz-linear-gradient(top,  #A9A9A9,  #7A7A7A);  
+}

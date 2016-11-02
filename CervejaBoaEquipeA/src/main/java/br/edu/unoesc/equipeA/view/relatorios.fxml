@@ -4,9 +4,6 @@
 <?import com.jfoenix.controls.JFXTogglePane?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -14,7 +11,7 @@
    <children>
       <JFXTogglePane />
 
-      <JFXButton defaultButton="true" layoutX="77.0" layoutY="206.0" onAction="#onCadastradas" prefHeight="97.0" prefWidth="256.0" text="Todas Cadastradas" textAlignment="CENTER">
+      <JFXButton defaultButton="true" layoutX="77.0" layoutY="206.0" onAction="#onCadastradas" prefHeight="97.0" prefWidth="256.0" styleClass="salvar" stylesheets="@../../../../../../resources/css/style.css" text="Todas Cadastradas" textAlignment="CENTER">
          <font>
             <Font size="24.0" />
          </font></JFXButton>
@@ -30,7 +27,7 @@
          <font>
             <Font size="24.0" />
          </font></JFXButton>
-      <JFXButton defaultButton="true" layoutX="534.0" layoutY="206.0" onAction="#onNacionalidade" prefHeight="97.0" prefWidth="256.0" text="Nacionalidade" textAlignment="CENTER">
+      <JFXButton defaultButton="true" layoutX="534.0" layoutY="206.0" onAction="#onNacionalidade" prefHeight="97.0" prefWidth="256.0" styleClass="gren" text="Nacionalidade" textAlignment="CENTER">
          <font>
             <Font size="24.0" />
          </font></JFXButton>

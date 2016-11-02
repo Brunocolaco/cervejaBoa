@@ -13,9 +13,11 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			primaryStage.setTitle("Cerveja Boa");
+
 			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "login.fxml"));
 			Scene scene = new Scene(root);
-			// scene.getStylesheets().add("/css/style.css");
+			scene.getStylesheets().add("/css/style.css");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch (Exception e) {

@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
 import javax.swing.JOptionPane;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.mysql.jdbc.Connection;
+
 import br.edu.unoesc.equipeA.conexao.Conexao;
 import br.edu.unoesc.equipeA.conexao.ConexaoMysqlProducao;
 import javafx.event.ActionEvent;
@@ -76,6 +79,7 @@ public class loginController {
 
 			} else {
 				JOptionPane.showMessageDialog(null, "Usário ou senha incorretos!");
+				tfSenha.setText("");
 			}
 
 		} catch (SQLException e) {
