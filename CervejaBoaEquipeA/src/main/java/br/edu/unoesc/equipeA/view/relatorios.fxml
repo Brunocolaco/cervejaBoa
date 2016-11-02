@@ -2,48 +2,59 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTogglePane?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unoesc.equipeA.controller.relatoriosController">
    <children>
       <JFXTogglePane />
-      <MenuBar layoutY="-2.0" prefHeight="37.0" prefWidth="1280.0">
-         <menus>
-            <Menu mnemonicParsing="false" text="Cadastro">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Cerveja" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Avaliações">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Avaliar" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Relatórios">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Ranking" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Cervejas">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Buscar" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
 
-      <JFXButton defaultButton="true" layoutX="106.0" layoutY="84.0" onAction="#onCadastradas" text="Todas Cadastradas" />
-      <JFXButton layoutX="337.0" layoutY="84.0" onAction="#onEstilo" text="Estilo" />
-      <JFXButton layoutX="469.0" layoutY="84.0" onAction="#onMalteCevada" text="Proporção de Malte de Cevada" />
-      <JFXButton layoutX="812.0" layoutY="84.0" onAction="#onAlcoolica" text="Graduação Alcoólica" />
-      <JFXButton layoutX="121.0" layoutY="199.0" onAction="#onNacionalidade" text="Nacionalidade" />
-      <JFXButton layoutX="373.0" layoutY="199.0" onAction="#onMaiorNota" text="Maior Nota" />
-      <JFXButton layoutX="393.0" layoutY="287.0" onAction="#onMenorNota" text="Menor Nota" />
-      <JFXButton layoutX="645.0" layoutY="184.0" onAction="#onMaiorValor" text="Maior Valor" />
-      <JFXButton layoutX="659.0" layoutY="287.0" onAction="#onMenorValor" text="Menor Valor" />
+      <JFXButton defaultButton="true" layoutX="38.0" layoutY="201.0" onAction="#onCadastradas" prefHeight="97.0" prefWidth="256.0" styleClass="btn" text="Todas Cadastradas" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></JFXButton>
+      <JFXButton defaultButton="true" layoutX="38.0" layoutY="342.0" onAction="#onEstilo" prefHeight="97.0" prefWidth="256.0" text="Estilo" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="915.0" layoutY="197.0" onAction="#onMalteCevada" prefHeight="97.0" prefWidth="256.0" text="Proporção de Malte de Cevada" textAlignment="CENTER" textFill="#1b1b1b" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font></JFXButton>
+      <JFXButton defaultButton="true" layoutX="38.0" layoutY="486.0" onAction="#onAlcoolica" prefHeight="97.0" prefWidth="256.0" text="Graduação Alcoólica" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></JFXButton>
+      <JFXButton defaultButton="true" layoutX="495.0" layoutY="201.0" onAction="#onNacionalidade" prefHeight="97.0" prefWidth="256.0" styleClass="gren" text="Nacionalidade" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></JFXButton>
+      <JFXButton defaultButton="true" layoutX="915.0" layoutY="344.0" onAction="#onMaiorNota" prefHeight="97.0" prefWidth="256.0" text="Maior Nota" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></JFXButton>
+      <JFXButton defaultButton="true" layoutX="915.0" layoutY="488.0" onAction="#onMenorNota" prefHeight="97.0" prefWidth="256.0" text="Menor Nota" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></JFXButton>
+      <JFXButton defaultButton="true" layoutX="495.0" layoutY="342.0" onAction="#onMaiorValor" prefHeight="97.0" prefWidth="256.0" text="Maior Valor" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></JFXButton>
+      <JFXButton defaultButton="true" layoutX="495.0" layoutY="492.0" onAction="#onMenorValor" prefHeight="97.0" prefWidth="256.0" text="Menor Valor" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font></JFXButton>
+      <Label layoutX="120.0" layoutY="41.0" prefHeight="108.0" prefWidth="1040.0" text="Selecione o Relátorio Desejado">
+         <font>
+            <Font size="74.0" />
+         </font>
+      </Label>
 
    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
 </AnchorPane>
