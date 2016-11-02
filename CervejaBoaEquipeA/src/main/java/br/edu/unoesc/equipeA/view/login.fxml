@@ -3,31 +3,61 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.GaussianBlur?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="351.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unoesc.equipeA.controller.loginController">
+<AnchorPane prefHeight="385.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unoesc.equipeA.controller.loginController">
    <children>
-      <Pane prefHeight="351.0" prefWidth="421.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Pane prefHeight="351.0" prefWidth="421.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="131.0" layoutY="45.0" prefHeight="48.0" prefWidth="170.0" text="CERVEJA BOA">
+            <Label contentDisplay="TOP" layoutX="105.0" layoutY="41.0" prefHeight="48.0" prefWidth="213.0" text="CERVEJA BOA" textAlignment="CENTER" textFill="#f8ff3b" wrapText="true">
                <font>
-                  <Font name="Arial Bold" size="22.0" />
+                  <Font name="Arial Bold" size="28.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets top="-1.0" />
+               </opaqueInsets>
+               <effect>
+                  <GaussianBlur radius="0.0" />
+               </effect>
             </Label>
-            <JFXTextField fx:id="tfUsuario" layoutX="98.0" layoutY="128.0" maxWidth="294.0" minWidth="210.0" prefHeight="54.0" prefWidth="227.0" promptText="Usuário">
+            <JFXTextField fx:id="tfUsuario" layoutX="98.0" layoutY="128.0" maxWidth="294.0" minWidth="210.0" prefHeight="54.0" prefWidth="227.0" promptText="Usuário" unFocusColor="#ab8c1e">
                <font>
                   <Font size="22.0" />
-               </font></JFXTextField>
-            <JFXPasswordField fx:id="tfSenha" layoutX="97.0" layoutY="192.0" maxWidth="294.0" minWidth="186.0" prefHeight="54.0" prefWidth="227.0" promptText="Senha">
+               </font>
+               <focusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#9ca409" />
+                        <Stop color="#060500" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor></JFXTextField>
+            <JFXPasswordField fx:id="tfSenha" layoutX="97.0" layoutY="192.0" maxWidth="294.0" minWidth="186.0" prefHeight="54.0" prefWidth="227.0" promptText="Senha" unFocusColor="#ab8c1e">
                <font>
                   <Font size="22.0" />
-               </font></JFXPasswordField>
-            <JFXButton fx:id="btnLogin" defaultButton="true" layoutX="113.0" layoutY="266.0" onAction="#onLogar" prefHeight="45.0" prefWidth="197.0" text="Login">
+               </font>
+               <focusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#9ca409" />
+                        <Stop color="#060500" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </focusColor></JFXPasswordField>
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="113.0" layoutY="289.0" onAction="#onLogar" opacity="0.62" prefHeight="45.0" prefWidth="197.0" ripplerFill="#d7c90b" text="Login" textFill="#fbff00" textOverrun="LEADING_ELLIPSIS">
                <font>
-                  <Font size="21.0" />
+                  <Font name="System Bold" size="27.0" />
                </font>
             </JFXButton>
          </children>
