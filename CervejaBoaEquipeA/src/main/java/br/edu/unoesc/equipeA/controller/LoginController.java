@@ -71,6 +71,8 @@ public class LoginController {
 				Parent root = null;
 				try {
 					root = FXMLLoader.load(getClass().getResource("../view/principal.fxml"));
+					root.getStylesheets().add("/css/style.css");
+
 				} catch (IOException ex) {
 				}
 				Scene scene = new Scene(root);

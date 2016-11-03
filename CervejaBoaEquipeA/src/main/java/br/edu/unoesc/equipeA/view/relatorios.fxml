@@ -47,7 +47,7 @@
          <font>
             <Font size="24.0" />
          </font></JFXButton>
-      <Label layoutX="120.0" layoutY="41.0" prefHeight="108.0" prefWidth="1040.0" text="Selecione o Relátorio Desejado">
+      <Label layoutX="103.0" layoutY="39.0" prefHeight="108.0" prefWidth="1040.0" styleClass="titulos" text="Selecione o Relátorio Desejado">
          <font>
             <Font size="74.0" />
          </font>

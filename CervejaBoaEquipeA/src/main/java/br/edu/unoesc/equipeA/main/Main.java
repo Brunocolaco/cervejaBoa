@@ -16,7 +16,7 @@ public class Main extends Application {
 		try {
 			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource(PATH_VIEW + "login.fxml"));
 			Scene scene = new Scene(root);
-			// scene.getStylesheets().add("/css/style.css");
+			scene.getStylesheets().add("/css/style.css");
 			primaryStage.getIcons().add(new Image("/icon/beer-icon.png"));
 			primaryStage.setTitle("Cerveja Boa - Equipe A");
 			primaryStage.setScene(scene);
