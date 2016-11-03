@@ -25,7 +25,7 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class loginController {
+public class LoginController {
 
 	@FXML
 	private JFXPasswordField tfSenha;
@@ -50,7 +50,7 @@ public class loginController {
 
 	private Conexao conexao;
 
-	public loginController() {
+	public LoginController() {
 		conexao = new ConexaoMysqlProducao();
 	}
 
