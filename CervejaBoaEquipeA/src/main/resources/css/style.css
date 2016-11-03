@@ -3,6 +3,7 @@
 	-fx-background-color:black;
 	
 }
+/*-------------------------------------------//////------------------------------------------*/
 
 .button {
     -fx-padding: 5.0 22.0 5.0 22.0;   
@@ -41,6 +42,7 @@
     -fx-text-fill: #939348;
     
 }
+/*-------------------------------------------//////------------------------------------------*/
 .titulos{
 	-fx-text-fill: #e6e600;
  	-fx-font-family: "Segoe UI Semibold";
@@ -48,6 +50,7 @@
  	-fx-text-align:center;
 	
 }
+/*-------------------------------------------//////------------------------------------------*/
 
 .menu-bar{
 	-fx-background-color: grey;
@@ -75,4 +78,102 @@
 .label{
 	-fx-font-family: "Arial";
 		 -fx-text-fill: #a6a6a6;
+}
+/*-------------------------------------------//////------------------------------------------*/
+.combo-box-base{
+    -fx-background-color: grey;
+    -fx-padding: 2 2;
+}
+
+.combo-box-base:editable{
+    -fx-background-color: #bfc94e;
+}
+
+.combo-box-base:editable > .text-field {
+    -fx-border-image-source: null;
+    -fx-background-color: transparent;
+    -fx-padding: 1 0;
+}
+
+.combo-box-base > .arrow-button {
+   -fx-background-color: #bfc94e;
+   -fx-padding: 0 4;
+  }
+
+.combo-box-base > .arrow-button > .arrow {
+    -fx-background-color: black;
+    -fx-background-insets: 0 0 0 0;
+    -fx-padding: 2 4;
+    -fx-shape: "M 0 0 H 7 L 3.5 4 z";
+}
+
+.combo-box-popup > .list-view {
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-background-color: white;
+    -fx-background-insets: 0, 1;
+}
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-padding: 1 10;
+    -fx-background: yellow;
+}
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+    -fx-background: green;
+    -fx-background-color: orange !important;
+}
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
+    -fx-background-color: silver !important;
+}
+.combo-box-popup > .list-view > .placeholder > .label {
+    -fx-text-fill: blue;
+}
+.table-view{
+   -fx-background-color: transparent;
+}
+/*-------------------------------------------//////------------------------------------------*/
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #616161;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #424242;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #b2a517;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+.table-column{
+	
+    -fx-text-alignment: center;
 }

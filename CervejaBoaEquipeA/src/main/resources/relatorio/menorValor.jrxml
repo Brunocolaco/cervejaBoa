@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2016-10-29T14:15:37 -->
+<!-- 2016-11-03T12:52:18 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="menorValor" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cd8a944b-c420-44d8-b665-6a26524dd32c">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CervejaBoa"/>
 	<queryString language="SQL">
-		<![CDATA[SELECT avaliacao.nota,
-	cerveja.`Nome`
-FROM cerveja
-	join avaliacao ON 
-	 cerveja.`idCerveja` = avaliacao.`idCerveja` 
-ORDER BY avaliacao.nota]]>
+		<![CDATA[select avaliacao.preco,cerveja.Nome from cerveja join avaliacao on 
+cerveja.idCerveja = avaliacao.idCerveja
+order by avaliacao.preco ]]>
 	</queryString>
+	<field name="preco" class="java.lang.Double"/>
 	<field name="Nome" class="java.lang.String"/>
-	<field name="Nota" class="java.lang.Integer"/>
 	<background>
 		<band/>
 	</background>
@@ -80,12 +77,12 @@ ORDER BY avaliacao.nota]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{Nome}]]></textFieldExpression>
 			</textField>
-			<textField isStretchWithOverflow="true">
+			<textField isStretchWithOverflow="true" pattern="¤#,##0.00;¤-#,##0.00">
 				<reportElement x="277" y="0" width="277" height="20" uuid="08baba76-a8e8-40a0-908a-9230451d3893"/>
 				<textElement textAlignment="Center">
 					<font size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{Nota}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{preco}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

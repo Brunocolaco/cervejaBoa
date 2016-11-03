@@ -13,12 +13,12 @@
    <children>
       <Pane />
       <JFXTextField fx:id="tfBuscar" focusColor="#fff1a2" layoutX="633.0" layoutY="122.0" maxWidth="543.0" minWidth="249.0" onKeyPressed="#onPesquisar" prefHeight="37.0" prefWidth="380.0" unFocusColor="#e7db00" />
-      <TableView fx:id="tvCerveja" layoutX="78.0" layoutY="268.0" prefHeight="378.0" prefWidth="1136.0">
+      <TableView fx:id="tvCerveja" layoutX="53.0" layoutY="268.0" prefHeight="378.0" prefWidth="1138.0">
         <columns>
           <TableColumn fx:id="tcNome" prefWidth="550.0" text="Nome" />
           <TableColumn fx:id="tcTeor" prefWidth="215.0" text="Teor Alcoolico" />
             <TableColumn fx:id="tcMalte" prefWidth="207.0" text="Proporção Malte" />
-            <TableColumn fx:id="tcPreco" prefWidth="163.0" text="Preço" />
+            <TableColumn fx:id="tcPreco" prefWidth="165.0" text="Preço" />
         </columns>
       </TableView>
       <Label layoutX="78.0" layoutY="110.0" text="Digite o nome a ser pesquisado:">

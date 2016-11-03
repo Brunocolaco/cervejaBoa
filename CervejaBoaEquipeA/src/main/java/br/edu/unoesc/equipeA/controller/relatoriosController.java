@@ -22,7 +22,7 @@ public class relatoriosController {
 	void onAlcoolica(ActionEvent event) {
 		try {
 			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					"C:\\Users\\Bruno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\GraduacaoAlcoolica.jasper",
+					"C:\\Users\\Marcos Policeno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\GraduacaoAlcoolica.jasper",
 					null, new ConexaoMysqlProducao().get());
 			JasperViewer.viewReport(jasperPrint, false);// false=serve para nao
 														// fechar a tela após
@@ -38,7 +38,7 @@ public class relatoriosController {
 	void onCadastradas(ActionEvent event) {
 		try {
 			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					"C:\\Users\\Bruno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\todasCadastradas.jasper",
+					"C:\\Users\\Marcos Policeno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\todasCadastradas.jasper",
 					null, new ConexaoMysqlProducao().get());
 			JasperViewer.viewReport(jasperPrint, false);// false=serve para nao
 														// fechar a tela após
@@ -55,7 +55,7 @@ public class relatoriosController {
 	void onEstilo(ActionEvent event) {
 		try {
 			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					"C:\\Users\\Bruno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\estilo.jasper",
+					"C:\\Users\\Marcos Policeno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\estilos.jasper",
 					null, new ConexaoMysqlProducao().get());
 			JasperViewer.viewReport(jasperPrint, false);// false=serve para nao
 														// fechar a tela após
@@ -72,7 +72,7 @@ public class relatoriosController {
 	void onMaiorNota(ActionEvent event) {
 		try {
 			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					"C:\\Users\\Bruno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\maiorNota.jasper",
+					"C:\\Users\\Marcos Policeno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\maiorNota.jasper",
 					null, new ConexaoMysqlProducao().get());
 			JasperViewer.viewReport(jasperPrint, false);// false=serve para nao
 														// fechar a tela após
@@ -89,7 +89,7 @@ public class relatoriosController {
 	void onMaiorValor(ActionEvent event) {
 		try {
 			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					"C:\\Users\\Bruno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\maiorValor.jasper",
+					"C:\\Users\\Marcos Policeno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\maiorValor.jasper",
 					null, new ConexaoMysqlProducao().get());
 			JasperViewer.viewReport(jasperPrint, false);// false=serve para nao
 														// fechar a tela após
@@ -106,7 +106,7 @@ public class relatoriosController {
 	void onMalteCevada(ActionEvent event) {
 		try {
 			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					"C:\\Users\\Bruno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\proporcaoMalteCevada.jasper",
+					"C:\\Users\\Marcos Policeno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\proporcaoMalteCevada.jasper",
 					null, new ConexaoMysqlProducao().get());
 			JasperViewer.viewReport(jasperPrint, false);// false=serve para nao
 														// fechar a tela após
@@ -123,7 +123,7 @@ public class relatoriosController {
 	void onMenorNota(ActionEvent event) {
 		try {
 			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					"C:\\Users\\Bruno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\MenorNota.jasper",
+					"C:\\Users\\Marcos Policeno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\MenorNota.jasper",
 					null, new ConexaoMysqlProducao().get());
 			JasperViewer.viewReport(jasperPrint, false);// false=serve para nao
 														// fechar a tela após
@@ -140,7 +140,7 @@ public class relatoriosController {
 	void onMenorValor(ActionEvent event) {
 		try {
 			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					"C:\\Users\\Bruno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\menorValor.jasper",
+					"C:\\Users\\Marcos Policeno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\menorValor.jasper",
 					null, new ConexaoMysqlProducao().get());
 			JasperViewer.viewReport(jasperPrint, false);// false=serve para nao
 														// fechar a tela após
@@ -157,7 +157,7 @@ public class relatoriosController {
 	void onNacionalidade(ActionEvent event) {
 		try {
 			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					"C:\\Users\\Bruno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\nacionalidade.jasper",
+					"C:\\Users\\Marcos Policeno\\git\\cervejaBoa\\CervejaBoaEquipeA\\src\\main\\resources\\relatorio\\nacionalidade.jasper",
 					null, new ConexaoMysqlProducao().get());
 			JasperViewer.viewReport(jasperPrint, false);// false=serve para nao
 														// fechar a tela após
