@@ -32,7 +32,7 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 			ps.setDate(4, objeto.getData());
 			ps.setLong(5, objeto.getCerveja().getCodigo());
 			ps.executeUpdate();
-			// Popular o objeto com o código gerado.
+			// Popular o objeto com o codigo gerado.
 			ResultSet rs = ps.getGeneratedKeys();
 			rs.next();
 			objeto.setCodigo(rs.getLong(1));
@@ -54,6 +54,7 @@ public class AvaliacaoJDBC implements AvaliacaoDAO {
 			ps.setDouble(3, objeto.getPreco());
 			ps.setDate(4, objeto.getData());
 			ps.setLong(5, objeto.getCerveja().getCodigo());
+			ps.setLong(6, objeto.getCodigo());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

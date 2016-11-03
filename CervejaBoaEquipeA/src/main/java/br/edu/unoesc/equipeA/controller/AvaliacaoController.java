@@ -3,7 +3,6 @@ package br.edu.unoesc.equipeA.controller;
 import java.sql.Date;
 import java.time.LocalDate;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextArea;
@@ -28,15 +27,6 @@ public class AvaliacaoController {
 
 	@FXML
 	private JFXTextArea txaDescricao;
-
-	@FXML
-	private JFXButton btnSalvar;
-
-	@FXML
-	private JFXButton btnCancelar;
-
-	@FXML
-	private JFXButton btnLimpar;
 
 	@FXML
 	private JFXTextField tfNota;

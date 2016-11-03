@@ -43,6 +43,7 @@ public class BuscarController {
 
 	@FXML
 	public void initialize() {
+
 		tcNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
 		tcTeor.setCellValueFactory(new PropertyValueFactory<>("teoralc"));
 		tcPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));

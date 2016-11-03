@@ -20,6 +20,10 @@ public class Avaliacao implements Entidade, RenderizaCombo {
 
 	public Cerveja cerveja;
 
+	public Avaliacao(Long codigo) {
+		this.codigo = codigo;
+	}
+
 	@Override
 	public String getText() {
 		// TODO Auto-generated method stub

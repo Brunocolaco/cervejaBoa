@@ -26,7 +26,7 @@ public class AvaliacaoDAOTest {
 		AvaliacaoDAO avaliacaoDAO = DAOFactory.get().avaliacaoDAO();
 		avaliacaoDAO.inserir(avaliacao);
 		assertNotNull(avaliacao.getCodigo());
-		// avaliacaoDAO.excluir(avaliacao.getCodigo());
+		avaliacaoDAO.excluir(avaliacao.getCodigo());
 	}
 
 	public void deveAlterarAvaliacao() {
