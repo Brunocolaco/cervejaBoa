@@ -45,37 +45,16 @@ public class AvaliacaoController {
 
 	private CervejaDAO cervejaDAO;
 	private AvaliacaoDAO avaliacaoDAO;
-	// private EstiloDAO estiloDAO;
-	// private NacionalidadeDAO nacionalidadeDAO;
 
 	public AvaliacaoController() {
 		cervejaDAO = DAOFactory.get().cervejaDAO();
-		// estiloDAO = DAOFactory.get().estiloDAO();
-		// nacionalidadeDAO = DAOFactory.get().nacionalidadeDAO();
+		avaliacaoDAO = DAOFactory.get().avaliacaoDAO();
 	}
 
 	@FXML
 	public void initialize() {
-		// montaComboEstilo();
-		// montaComboNacionalidade();
 		montaComboCerveja();
 	}
-
-	// private void montaComboNacionalidade() {
-	// cbNacionalidade.getItems().addAll(nacionalidadeDAO.todos());
-	// cbNacionalidade.setCellFactory((comboBox) -> {
-	// return new ListCellBean<Nacionalidade>();
-	// });
-	// cbNacionalidade.setConverter(new StringConverterBean<>());
-	// }
-
-	// private void montaComboEstilo() {
-	// cbEstilo.getItems().addAll(estiloDAO.todos());
-	// cbEstilo.setCellFactory((comboBox) -> {
-	// return new ListCellBean<Estilo>();
-	// });
-	// cbEstilo.setConverter(new StringConverterBean<>());
-	// }
 
 	private void montaComboCerveja() {
 		cbNome.getItems().addAll(cervejaDAO.todos());
@@ -86,8 +65,6 @@ public class AvaliacaoController {
 	}
 
 	private void limparCampos() {
-		// cbEstilo.setValue(null);
-		// cbNacionalidade.setValue(null);
 		cbNome.setValue(null);
 		txaDescricao.setText("");
 		tfPreco.setText("");
