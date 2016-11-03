@@ -1,17 +1,17 @@
 package br.edu.unoesc.equipeA.controller;
 
 import java.util.Collection;
+
 import com.jfoenix.controls.JFXTextField;
+
 import br.edu.unoesc.equipeA.dao.CervejaDAO;
 import br.edu.unoesc.equipeA.factory.DAOFactory;
 import br.edu.unoesc.equipeA.model.Cerveja;
-import javafx.beans.binding.IntegerBinding;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 
