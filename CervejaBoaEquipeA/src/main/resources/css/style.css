@@ -1,5 +1,74 @@
-.button{
+.backgroud{
+	-fx-background-size: cover;
+	-fx-background-color:black;
+	
+}
 
-    -fx-background-color: green;
+.button {
+    -fx-padding: 5.0 22.0 5.0 22.0;   
+    -fx-border-color: #ced33d;
+    -fx-border-width: 3.0;
+    -fx-background-radius: 0.0;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 18.0pt;
+    -fx-text-fill: black;
+    -fx-background-insets: 0.0 0.0 0.0 0.0, 0.0, 1.0, 2.0;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: #e8e866;
+  -fx-text-fill: grey;
+}
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1.0, 1.0;
+    -fx-border-style: solid, segments(1.0, 1.0);
+    -fx-border-radius: 0.0, 0.0;
+    -fx-border-insets: 1.0 1.0 1.0 1.0, 0.0;
+}
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.3;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: black;
+}
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #6b6b00;
+}
+.button:default:hover {
+    -fx-background-color: #e8e866;
+    -fx-text-fill: #939348;
     
+}
+.titulos{
+	-fx-text-fill: #e6e600;
+ 	-fx-font-family: "Segoe UI Semibold";
+ 	-fx-text-fill-color:transparent;
+ 	-fx-text-align:center;
+	
+}
+
+.menu-bar{
+	-fx-background-color: grey;
+	-fx-border-radius: 2.0px;
+	-fx-border: solid 1.0px #6D6D6D;
+}
+
+.context-menu {
+    -fx-background-color: #ffff66;
+}
+
+.menu-bar .label {
+    -fx-font-size: 14.0pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+.menu:hover {
+    -fx-background-color:#6b6b00 ;
 }
