@@ -6,7 +6,6 @@ import br.edu.unoesc.equipeA.main.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
@@ -63,11 +62,11 @@ public class PrincipalController {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource(Main.PATH_VIEW + "relatorios.fxml"));
 		try {
-			
+
 			AnchorPane relatorioView = (AnchorPane) loader.load();
 			relatorioView.getStylesheets().add("/css/style.css");
 			principalTela.setCenter(relatorioView);
-			
+
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
